@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>나라트랜스 무진동 운송</title>
+<meta name="description" content="나라트랜스(대한민국특수화물운송팀)는 반도체 장비·의료기기·서버·미술품을 무진동·항온항습·리프트 차량(1.4t·3.5t·5t·11t)으로 운송합니다. 적재물배상책임보험 10억 원, 포장·상하차·현장 반입, 전국 운송. 대표 직통 010-5256-2425">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="나라트랜스 - 무진동·항온항습·리프트 정밀장비 운송">
+<meta property="og:description" content="반도체 장비·의료기기·서버·미술품. 1.4t~11t 전 차종 에어서스펜션·리프트. 대표 직통 010-5256-2425">
+<meta property="og:url" content="https://ddggdd-dev.github.io/naratrans/v3/">
+<meta property="og:image" content="https://ddggdd-dev.github.io/naratrans/v3/img/v3-og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap">
+<link rel="icon" href="img/v3-logo.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"나라트랜스","alternateName":"대한민국특수화물운송팀","description":"무진동·항온항습·리프트 차량으로 반도체 장비, 의료기기, 서버, 미술품 등 정밀장비를 운송합니다.","telephone":"+82-10-5256-2425","email":"kjs242424@gmail.com","url":"https://ddggdd-dev.github.io/naratrans/","image":"https://ddggdd-dev.github.io/naratrans/v3/img/v3-og.jpg","address":{"@type":"PostalAddress","addressCountry":"KR"},"areaServed":"KR","founder":{"@type":"Person","name":"김준수"}}
+</script>
+<!-- class="draft-only": 사장님 정보를 받기 전에는 고객용(공개) 버전에서 통째로 뺀다. 받으면 class를 지우고 내용을 채운다. -->
+<style>
+/* 레이아웃: 장비 제원표처럼 읽히는 페이지. 남색 띠 + 흰 여백, 숫자는 고정폭, 주황은 전화에만. */
+:root{
+  --paper:#F4F6F9; --surface:#FFFFFF; --ink:#0F1E36; --muted:#4A5872; --line:#D3DAE5;
+  --band:#13284A; --band-ink:#F2F5FA; --band-muted:#B7C4D9;
+  --call:#C2410C; --call-ink:#FFFFFF; --call-glow:#FF9A52;
+  --mark:#2F5D9E; --bar:#13284A;
+  --blank-bg:rgba(240,128,40,.16); --blank-line:#D9701F; --blank-ink:#8A3B06;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-num:var(--f-body);
+  --wrap:1160px; --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0B1322; --surface:#121D31; --ink:#E6ECF5; --muted:#A3B2C8; --line:#26354F;
+  --band:#0E1F3B; --band-ink:#F2F5FA; --band-muted:#AFC0D8;
+  --call:#D2550D; --call-ink:#FFFFFF; --call-glow:#FFA766; --mark:#8FB2EA; --bar:#4F74B3;
+  --blank-bg:rgba(240,128,40,.18); --blank-line:#F08A3C; --blank-ink:#FFC08F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0B1322; --surface:#121D31; --ink:#E6ECF5; --muted:#A3B2C8; --line:#26354F;
+  --band:#0E1F3B; --band-ink:#F2F5FA; --band-muted:#AFC0D8;
+  --call:#D2550D; --call-ink:#FFFFFF; --call-glow:#FFA766; --mark:#8FB2EA; --bar:#4F74B3;
+  --blank-bg:rgba(240,128,40,.18); --blank-line:#F08A3C; --blank-ink:#FFC08F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-bottom:88px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--call-glow);outline-offset:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums;letter-spacing:0}
+.nowrap{white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--surface);padding:12px 16px;z-index:50}
+.skip:focus{left:16px}
+
+/* 빈칸·샘플 (시안 전용, 고객용에서는 숨김) */
+.blank,.sample{background:var(--blank-bg);border:1.5px dashed var(--blank-line);color:var(--blank-ink);border-radius:4px;padding:0 6px;font-weight:600;font-size:1em}
+.out .blank,.contact .blank,.hero .blank{color:#FFC08F;border-color:#F08A3C}
+.sample-box{background:var(--blank-bg);border:1.5px dashed var(--blank-line);border-radius:var(--r)}
+.ref{position:absolute;left:8px;bottom:8px;font-size:.8125rem;line-height:1;padding:6px 8px;border-radius:3px;background:rgba(10,18,32,.72);color:#fff;letter-spacing:.02em}
+
+/* 버튼 */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:var(--r);font-weight:700;font-size:1.0625rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;line-height:1.3}
+.btn-call{background:var(--call);color:var(--call-ink)}
+.btn-call:hover{filter:brightness(1.08)}
+.btn-line{background:transparent;color:inherit;border-color:currentColor}
+.btn-line:hover{background:rgba(127,140,160,.12)}
+
+/* 머리글 */
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:68px;padding-block:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.brand img{width:44px;height:44px;border-radius:50%}
+.brand b{font-size:1.1875rem;display:block;line-height:1.2}
+.brand small{display:block;font-size:.8125rem;color:var(--muted);line-height:1.3}
+.nav{display:none;gap:4px}
+.nav a{padding:12px 10px;text-decoration:none;font-size:.9375rem;color:var(--muted);font-weight:600}
+.nav a:hover{color:var(--ink)}
+.top-tel{display:none;text-align:right;line-height:1.25;text-decoration:none}
+.top-tel small{display:block;font-size:.8125rem;color:var(--muted)}
+.top-tel b{font-size:1.25rem}
+.top .btn{min-height:44px;padding:8px 16px;font-size:.9375rem}
+@media (min-width:1080px){.nav{display:flex}.top-tel{display:block}.top .btn{display:none}}
+
+/* 첫 화면 */
+.hero{background:var(--band);color:var(--band-ink)}
+.hero-grid{display:grid}
+.hero-photo{position:relative;margin:0}
+.hero-photo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.hero-copy{padding-block:32px 40px}
+.eyebrow{font-size:.9375rem;font-weight:600;color:var(--band-muted);margin:0 0 12px}
+.eyebrow .dot{color:var(--call-glow)}
+.hero h1{font-size:clamp(1.875rem,1.2rem + 2.6vw,3.5rem);line-height:1.22;margin:0 0 16px;letter-spacing:-.02em;text-wrap:balance}
+.hero .lead{margin:0 0 24px;color:var(--band-muted);max-width:34em}
+.hero .lead strong{color:var(--band-ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta .btn-line{color:var(--band-ink)}
+.tel-text{margin:14px 0 0;font-size:.9375rem;color:var(--band-muted)}
+.tel-text b{color:var(--band-ink);font-size:1.125rem}
+.facts{list-style:none;margin:32px 0 0;padding:20px 0 0;border-top:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.facts li{display:flex;flex-direction:column;gap:2px}
+.facts b{font-size:1.0625rem;line-height:1.35}
+.facts li>span{font-size:.875rem;color:var(--band-muted);line-height:1.45}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:stretch}
+  .hero-photo{order:2;min-height:100%}
+  .hero-photo img{height:100%;aspect-ratio:auto;min-height:560px;object-position:60% 50%}
+  .hero-copy{padding-block:72px 64px;padding-right:48px}
+  .hero-wrap{max-width:none;padding-right:0;padding-left:max(16px,env(safe-area-inset-left,0px),calc((100vw - var(--wrap))/2 + 16px))}
+  .facts{grid-template-columns:repeat(4,1fr)}
+}
+
+/* 슬로건 */
+.motto{background:var(--surface);border-bottom:1px solid var(--line)}
+.motto .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;padding-block:24px}
+.motto q{quotes:none;font-size:clamp(1.375rem,1rem + 1.4vw,1.875rem);font-weight:700;letter-spacing:-.01em}
+.motto span{color:var(--muted);font-size:.9375rem}
+
+/* 섹션 공통 */
+section{padding-block:72px}
+@media (min-width:900px){section{padding-block:104px}}
+.sec-head{max-width:40em;margin-bottom:40px}
+.label{font-size:.875rem;font-weight:600;color:var(--muted);margin:0 0 8px;display:flex;align-items:center;gap:10px}
+.label::before{content:"";width:24px;height:2px;background:var(--mark)}
+h2{font-size:clamp(1.625rem,1.2rem + 1.5vw,2.375rem);line-height:1.28;margin:0 0 12px;letter-spacing:-.015em;text-wrap:balance}
+.sec-head p{margin:0;color:var(--muted)}
+h3{font-size:1.1875rem;line-height:1.4;margin:0 0 8px}
+
+/* 신뢰 4가지 */
+.trust{display:grid;gap:0;border-top:2px solid var(--ink);align-items:start}
+.trust li{list-style:none;display:grid;grid-template-columns:56px minmax(0,1fr);align-content:start;gap:4px 16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.trust .n{font-family:var(--f-num);font-variant-numeric:tabular-nums;font-size:1.75rem;font-weight:700;color:var(--mark);line-height:1.1}
+.trust p{margin:0;color:var(--muted)}
+.trust .ev{grid-column:2;margin-top:8px;display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.9375rem}
+.trust .ev span{color:var(--ink)}
+.trust-wrap{padding:0;margin:0}
+.trust .log{display:block;padding:12px 14px;margin-top:12px}
+.trust .log .spec{margin-top:8px}
+.trust .log td{font-weight:400;color:var(--muted)}
+@media (min-width:900px){.trust{grid-template-columns:1fr 1fr;column-gap:48px}.trust li{grid-template-columns:64px minmax(0,1fr)}}
+
+/* 화물 카드 */
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.cargo{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.card{display:flex;flex-direction:column;gap:12px;min-width:0}
+.card figure{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:var(--line)}
+.card figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card p{margin:0;color:var(--muted);font-size:.9688rem;line-height:1.6}
+.who{font-size:.875rem;color:var(--ink);font-weight:600;margin:0}
+.who::before{content:"이런 분께 · ";color:var(--muted);font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:8px 14px;font-size:.9375rem}
+.chips-title{margin:32px 0 0;font-weight:600}
+.chips-title + .chips{margin-top:12px}
+
+/* 차량 */
+.fleet{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr))}
+.veh{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.veh figure{position:relative;margin:0}
+.veh figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.veh .body{padding:16px 16px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.veh .ton{font-family:var(--f-num);font-size:1.75rem;font-weight:600;line-height:1}
+.veh .ton small{font-family:var(--f-body);font-size:.9375rem;font-weight:600;color:var(--muted);margin-left:6px}
+.spec{width:100%;border-collapse:collapse;font-size:.9375rem}
+.spec th{text-align:left;font-weight:400;color:var(--muted);padding:6px 0;border-top:1px solid var(--line);width:46%}
+.spec td{padding:6px 0;border-top:1px solid var(--line);text-align:right;font-weight:600}
+.spec td.num{font-weight:600}
+.ok{color:var(--ink)}
+.ok::before{content:"✓ ";color:var(--mark)}
+.ask{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
+.ask p{margin:0;font-weight:600;flex:1 1 100%}
+@media (min-width:900px){.ask p{flex:0 1 auto}}
+.fleet-note{margin:24px 0 0;color:var(--muted);font-size:.9375rem}
+
+/* 적재함 길이 자 */
+.ruler{margin-top:40px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 16px 16px}
+.ruler h3{margin-bottom:4px}
+.ruler > p{margin:0 0 16px;color:var(--muted);font-size:.9375rem}
+.ruler-scale{position:relative;height:96px;margin:0 16px}
+.ruler-axis{position:absolute;left:0;right:0;top:54px;height:2px;background:var(--ink)}
+.tick{position:absolute;top:50px;width:1px;height:14px;background:var(--ink)}
+.tick-l{position:absolute;top:70px;transform:translateX(-50%);font-family:var(--f-num);font-size:.8125rem;color:var(--muted);white-space:nowrap}
+.bar{position:absolute;top:30px;height:24px;left:0;background:var(--bar);border-radius:2px;color:#fff;font-size:.8125rem;font-weight:600;line-height:24px;padding-left:8px;white-space:nowrap;overflow:hidden}
+.cargo-mark{position:absolute;top:22px;width:3px;height:40px;background:var(--call);display:none}
+.cargo-mark span{position:absolute;bottom:42px;left:0;background:var(--call);color:var(--call-ink);font-size:.8125rem;padding:2px 6px;border-radius:3px;white-space:nowrap;font-weight:600}
+.ruler-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:8px;font-size:.875rem;color:var(--muted)}
+
+/* 상담 내용 정리 */
+.planner{display:grid;gap:24px}
+@media (min-width:960px){.planner{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:start}}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 16px;display:grid;gap:20px}
+@media (min-width:600px){.form{padding:28px}}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend,.flabel{font-weight:600;font-size:.9375rem;margin-bottom:8px;display:block;padding:0}
+.opt{font-weight:400;color:var(--muted);font-size:.875rem}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.seg span{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:.9375rem;background:var(--paper)}
+.seg input:checked + span{border-color:var(--ink);background:var(--ink);color:var(--surface);font-weight:600}
+.seg input:focus-visible + span{outline:3px solid var(--call-glow);outline-offset:2px}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr))}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:.9375rem;font-weight:600}
+input[type=text],input[type=number],input[type=date],textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:4px;min-height:48px;padding:10px 12px;width:100%}
+input:focus,textarea:focus{border-color:var(--ink);outline:none;box-shadow:0 0 0 3px rgba(194,65,12,.25)}
+textarea{min-height:88px;resize:vertical}
+::placeholder{color:var(--muted);opacity:.85}
+.dims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.checks{display:grid;gap:4px;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
+.checks label{display:flex;align-items:center;gap:10px;min-height:44px;font-size:.9688rem;cursor:pointer}
+.checks input{width:20px;height:20px;accent-color:var(--call);flex:none}
+.out{background:var(--band);color:var(--band-ink);border-radius:var(--r);padding:20px 16px;display:flex;flex-direction:column;gap:16px;position:sticky;top:16px}
+@media (min-width:600px){.out{padding:28px}}
+.out h3{margin:0}
+.out .tag{font-size:.8125rem;color:var(--band-muted);margin:0}
+.msg{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:14px;white-space:pre-wrap;font-size:.9375rem;line-height:1.65;min-height:180px;margin:0;font-family:var(--f-body)}
+.hint{margin:0;font-size:.9375rem;color:var(--band-ink);background:rgba(255,154,82,.14);border-left:3px solid var(--call-glow);padding:10px 12px;border-radius:2px}
+.out .btns{display:grid;gap:10px}
+.out .btn-line{color:var(--band-ink)}
+@media (min-width:1080px){#smsBtn{display:none}}
+.out .after{margin:0;font-size:.9375rem;color:var(--band-muted)}
+.out .after b{color:var(--band-ink)}
+.ex-btn{margin-top:16px;min-height:44px;font-size:.9375rem;padding:8px 16px}
+.copied{font-size:.9375rem;color:var(--call-glow);min-height:1.5em;margin:0}
+
+/* 진행 과정 */
+.steps{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));counter-reset:s;padding:0;margin:0;list-style:none}
+.steps li{display:flex;flex-direction:column;gap:12px;min-width:0}
+.steps figure{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:var(--band)}
+.steps figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.steps .callbox{min-height:132px;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:20px;color:var(--band-ink)}
+.callbox small{color:var(--band-muted);font-size:.875rem}
+.callbox b{font-family:var(--f-num);font-size:clamp(1.25rem,1rem + 1vw,1.625rem);white-space:nowrap}
+.steps .k{font-family:var(--f-num);font-weight:600;color:var(--mark);font-size:.9375rem}
+.steps p{margin:0;color:var(--muted);font-size:.9688rem}
+
+/* 사례 */
+.case{padding:24px 16px}
+@media (min-width:600px){.case{padding:28px}.steps .callbox{aspect-ratio:4/3}}
+.case dl{display:grid;grid-template-columns:minmax(80px,auto) minmax(0,1fr);gap:10px 20px;margin:16px 0 0}
+.case dt{color:var(--muted);font-size:.9375rem}
+.case dd{margin:0}
+
+/* FAQ */
+.faq{border-top:2px solid var(--ink);max-width:52em}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:1.0625rem;position:relative;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:8px;top:16px;font-family:var(--f-num);font-size:1.5rem;color:var(--muted)}
+.faq details[open] summary::after{content:"−"}
+.faq .a{padding:0 0 20px;color:var(--muted)}
+.faq .a p{margin:0 0 8px}
+
+/* 문의 */
+.contact{background:var(--band);color:var(--band-ink)}
+.contact .grid{display:grid;gap:32px}
+@media (min-width:900px){.contact .grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:end}}
+.contact h2{color:var(--band-ink)}
+.contact .motto-c{font-size:1.25rem;font-weight:700;color:var(--call-glow);margin:0 0 8px}
+.contact p{color:var(--band-muted);margin:0 0 12px}
+.big-tel{display:inline-block;padding-block:6px;font-family:var(--f-num);font-weight:600;font-size:clamp(2rem,1.2rem + 3.6vw,3.5rem);letter-spacing:-.01em;color:var(--band-ink);text-decoration:none;white-space:nowrap;line-height:1.1;margin:8px 0 16px}
+.big-tel span{color:var(--call-glow)}
+.contact ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.contact li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.16)}
+.contact li span:first-child{color:var(--band-muted);font-size:.9375rem}
+.contact .cta{margin-top:8px}
+.contact .btn-line{color:var(--band-ink)}
+
+/* 바닥글 */
+footer{padding-block:40px 120px;font-size:.9375rem;color:var(--muted)}
+footer .wrap{display:grid;gap:16px}
+footer dl{display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:6px 16px;margin:0}
+footer dt{color:var(--muted)}
+footer dd{margin:0;color:var(--ink)}
+footer p{margin:0}
+
+/* 하단 전화 바 */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(9,17,32,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));transform:translateY(110%);transition:transform .25s ease}
+.callbar.show{transform:none}
+@media (prefers-reduced-motion:reduce){.callbar{transition:none}}
+.callbar a{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:var(--wrap);margin:0 auto;min-height:52px;text-decoration:none;color:#fff}
+.callbar .l{font-size:.9375rem;line-height:1.3}
+.callbar .l small{display:block;color:#C9D3E3;font-size:.8125rem}
+.callbar .r{font-family:var(--f-num);font-weight:600;font-size:1.25rem;color:#FFA766;white-space:nowrap}
+@media (min-width:1080px){.callbar{display:none}}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <a class="skip" href="#main">본문 바로가기</a>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="나라트랜스 처음으로">
+      <img src="img/v3-logo.webp" alt="" width="44" height="44">
+      <span><b>나라트랜스</b><small>대한민국특수화물운송팀</small></span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#cargo">운송 화물</a>
+      <a href="#fleet">보유 차량</a>
+      <a href="#plan">상담 내용 정리</a>
+      <a href="#process">진행 과정</a>
+      <a href="#faq">자주 묻는 질문</a>
+    </nav>
+    <a class="top-tel" href="tel:010-5256-2425" data-track="contact_call" data-where="header"><small>대표 직통</small><b class="num">010-5256-2425</b></a>
+    <a class="btn btn-call" href="tel:010-5256-2425" data-track="contact_call" data-where="header-m">전화 상담</a>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero" id="top">
+  <div class="wrap hero-wrap hero-grid">
+    <figure class="hero-photo">
+      <picture>
+        <source media="(max-width:899px)" srcset="img/v3-hero-m.webp" width="900" height="600">
+        <img src="img/v3-hero-pc.webp" width="950" height="733" alt="방진복을 입은 작업자들이 일하는 클린룸에 비닐로 포장한 장비가 들어와 있는 모습" fetchpriority="high" decoding="async">
+      </picture>
+      <span class="ref">참고 이미지</span>
+    </figure>
+    <div class="hero-copy">
+      <p class="eyebrow">무진동 <span class="dot">·</span> 항온항습 <span class="dot">·</span> 리프트 차량 전문</p>
+      <h1>정밀장비, 무진동 차량으로 세심하게 옮깁니다</h1>
+      <p class="lead"><strong>반도체 장비·의료기기·서버·미술품</strong>을 옮깁니다. 1.4톤부터 11톤까지 모든 차량에 에어서스펜션과 리프트가 있습니다. 포장과 현장 반입도 함께합니다.</p>
+      <div class="cta">
+        <a class="btn btn-call" id="heroCall" href="tel:010-5256-2425" data-track="contact_call" data-where="hero">전화 상담</a>
+        <a class="btn btn-line" href="#plan">상담 내용 정리하기</a>
+      </div>
+      <p class="tel-text">대표 직통 <b class="num nowrap">010-5256-2425</b></p>
+      <ul class="facts">
+        <li><b>전 차종 에어서스펜션</b><span>노면 충격을 줄이는 무진동 차량</span></li>
+        <li><b>전 차종 리프트</b><span>지게차가 없는 현장도 상담 가능</span></li>
+        <li><b><span class="nowrap">온습도 제어·기록</span></b><span>온도·습도에 민감한 장비 운송</span></li>
+        <li><b>보험 <span class="nowrap">10억 원</span></b><span>적재물배상책임보험 가입</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="motto">
+  <div class="wrap">
+    <q>정성을 다합니다.</q>
+    <span>나라트랜스 대표 김준수</span>
+  </div>
+</div>
+
+<section id="trust" aria-labelledby="trust-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">맡기기 전에</p>
+      <h2 id="trust-h">운송 업체를 정하기 전에 확인하세요</h2>
+      <p>담당자가 업체를 고를 때 묻는 것들입니다. 확인된 내용만 적었습니다.</p>
+    </div>
+    <ol class="trust trust-wrap">
+      <li>
+        <span class="n">01</span>
+        <div><h3>대표 직거래</h3><p>상담 전화는 김준수 대표의 휴대폰 번호입니다. 중간 담당자 없이 대표와 직접 상담합니다.</p></div>
+        <div class="ev"><span>대표 직통 <b class="num">010-5256-2425</b></span></div>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <div><h3>적재물배상책임보험 10억 원</h3><p>적재물배상책임보험 10억 원에 가입되어 있습니다. 보상 범위와 절차는 보험 약관에 따릅니다.</p></div>
+        <div class="ev"><span>보험사 <span class="blank">확인 중</span></span><span>1건당 보상 한도 <span class="blank">확인 중</span></span><span>증권 사본 <span class="blank">제공 여부 확인 중</span></span></div>
+      </li>
+      <li class="draft-only">
+        <span class="n">03</span>
+        <div><h3>허가·사업자 정보</h3><p>화물운송 허가번호와 사업자등록번호를 이곳에 적습니다.</p></div>
+        <div class="ev"><span>화물운송 허가 <span class="blank">보유 여부·번호 확인 중</span></span><span>사업자등록번호 <span class="blank">받는 중</span></span></div>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <div><h3>온습도 기록</h3><p>온도·습도를 제어하고 기록할 수 있습니다. 보고 자료가 필요하면 상담 때 말씀해 주세요.</p></div>
+        <div class="ev"><span>가능한 차량 <span class="blank">전 차종인지 확인 중</span></span><span>기록 제공 방식 <span class="blank">확인 중 (예: 출력물·파일)</span></span></div>
+        <div class="ev log sample-box draft-only"><span class="sample">기록 양식 예시 · 사장님 확인 후 실제 양식으로</span>
+          <table class="spec"><caption class="skip">운송 기록 양식 예시</caption>
+            <tr><th scope="row">운송 일시·구간</th><td>○월 ○일 · 출발지 → 도착지</td></tr>
+            <tr><th scope="row">차량</th><td>○톤 무진동 · 리프트</td></tr>
+            <tr><th scope="row">설정 온도·습도</th><td>○℃ · ○%</td></tr>
+            <tr><th scope="row">기록 간격</th><td>○분</td></tr>
+          </table></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt" id="cargo" aria-labelledby="cargo-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">운송 화물</p>
+      <h2 id="cargo-h">진동과 온도에 민감한 장비를 옮깁니다</h2>
+      <p>연구실·실험실·갤러리·서버실 이전도 맡습니다.</p>
+    </div>
+    <div class="cargo">
+      <article class="card">
+        <figure><img src="img/v3-c-semi.webp" width="1000" height="750" alt="방진복을 입은 작업자가 반도체 장비를 다루는 모습" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <h3>반도체 장비</h3>
+        <p>진동에 민감한 반도체 공정 장비.</p>
+        <p class="who">반도체 장비 담당</p>
+      </article>
+      <article class="card">
+        <figure><img src="img/v3-c-medical.webp" width="1000" height="666" alt="병원 치료실의 대형 의료 영상 장비" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <h3>의료기기</h3>
+        <p>진동과 온도에 민감한 의료 장비.</p>
+        <p class="who">병원 장비·시설 담당</p>
+      </article>
+      <article class="card">
+        <figure><img src="img/v3-c-server.webp" width="1000" height="575" alt="서버 랙이 줄지어 선 서버실 통로" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <h3>서버·서버랙</h3>
+        <p>서버실 이전, 서버·서버랙 운송.</p>
+        <p class="who">IT 인프라·전산실 담당</p>
+      </article>
+      <article class="card">
+        <figure><img src="img/v3-c-lab.webp" width="1000" height="666" alt="실험대 위에 나란히 놓인 현미경" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <h3>연구실·실험실 이전</h3>
+        <p>연구실·실험실의 실험 장비와 분석 기기 이전.</p>
+        <p class="who">연구소·대학 시설 담당</p>
+      </article>
+      <article class="card">
+        <figure><img src="img/v3-c-art.webp" width="1000" height="667" alt="유리 천장 아래 조각상이 놓인 미술관 전시실" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <h3>미술품·조형물·유물</h3>
+        <p>미술품·조형물·유물 운송, 갤러리 이전.</p>
+        <p class="who">갤러리·미술관·박물관</p>
+      </article>
+      <article class="card">
+        <figure><img src="img/v3-c-robot.webp" width="1000" height="563" alt="주황색 산업용 로봇 팔" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <h3>로봇·위성장비</h3>
+        <p>휴머노이드 로봇·로봇, 위성장비.</p>
+        <p class="who">로봇·우주 장비 개발팀</p>
+      </article>
+    </div>
+    <p class="chips-title">이런 화물을 운송합니다</p>
+    <ul class="chips">
+      <li>반도체 장비</li><li>의료기기</li><li>위성장비</li><li>휴머노이드 로봇</li><li>로봇</li><li>서버·서버랙</li><li>미술품·조형물</li><li>유물</li>
+    </ul>
+    <p class="chips-title">이전 전문</p>
+    <ul class="chips">
+      <li>연구실</li><li>실험실</li><li>갤러리</li><li>서버실</li>
+    </ul>
+  </div>
+</section>
+
+<section id="fleet" aria-labelledby="fleet-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">보유 차량</p>
+      <h2 id="fleet-h">1.4톤부터 11톤까지, 모든 차에 리프트</h2>
+      <p>네 가지 차급 모두 에어서스펜션과 리프트를 달았습니다. 화물 크기에 맞는 차급을 안내해 드립니다.</p>
+    </div>
+    <div class="fleet">
+      <article class="veh">
+        <figure><img src="img/v3-v-1_4t.webp" width="900" height="600" alt="파란 소형 탑차가 도로를 달리는 모습" loading="lazy" decoding="async"><span class="ref">참고 이미지 · 보유 차량 아님</span></figure>
+        <div class="body">
+          <p class="ton">1.4<small>톤</small></p>
+          <table class="spec"><caption class="skip">1.4톤 제원</caption>
+            <tr><th scope="row">적재함 길이</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">적재함 폭·높이</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">리프트</th><td class="ok">장착</td></tr>
+            <tr><th scope="row">리프트 하중</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">에어서스펜션</th><td class="ok">장착</td></tr>
+            <tr><th scope="row">보유 대수</th><td><span class="blank">확인 중</span></td></tr>
+          </table>
+        </div>
+      </article>
+      <article class="veh">
+        <figure><img src="img/v3-v-3_5t.webp" width="900" height="675" alt="중형 탑차가 건물 앞에 서 있는 모습" loading="lazy" decoding="async"><span class="ref">참고 이미지 · 보유 차량 아님</span></figure>
+        <div class="body">
+          <p class="ton">3.5<small>톤</small></p>
+          <table class="spec"><caption class="skip">3.5톤 제원</caption>
+            <tr><th scope="row">적재함 길이</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">적재함 폭·높이</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">리프트</th><td class="ok">장착</td></tr>
+            <tr><th scope="row">리프트 하중</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">에어서스펜션</th><td class="ok">장착</td></tr>
+            <tr><th scope="row">보유 대수</th><td><span class="blank">확인 중</span></td></tr>
+          </table>
+        </div>
+      </article>
+      <article class="veh">
+        <figure><img src="img/v3-v-5t.webp" width="900" height="675" alt="중형 탑차가 가로수길을 달리는 모습" loading="lazy" decoding="async"><span class="ref">참고 이미지 · 보유 차량 아님</span></figure>
+        <div class="body">
+          <p class="ton">5<small>톤 특수무진동 리프트</small></p>
+          <table class="spec"><caption class="skip">5톤 제원</caption>
+            <tr><th scope="row">적재함 길이</th><td class="num">6.5 m</td></tr>
+            <tr><th scope="row">적재함 폭·높이</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">리프트</th><td class="num">2.1 m <span class="blank">기준 확인</span></td></tr>
+            <tr><th scope="row">리프트 하중</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">에어서스펜션</th><td class="ok">장착</td></tr>
+            <tr><th scope="row">보유 대수</th><td><span class="blank">확인 중</span></td></tr>
+          </table>
+        </div>
+      </article>
+      <article class="veh">
+        <figure><img src="img/v3-v-11t.webp" width="800" height="600" alt="대형 탑차가 도로를 지나는 모습" loading="lazy" decoding="async"><span class="ref">참고 이미지 · 보유 차량 아님</span></figure>
+        <div class="body">
+          <p class="ton">11<small>톤</small></p>
+          <table class="spec"><caption class="skip">11톤 제원</caption>
+            <tr><th scope="row">적재함 길이</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">적재함 폭·높이</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">리프트</th><td class="ok">장착</td></tr>
+            <tr><th scope="row">리프트 하중</th><td><span class="blank">확인 중</span></td></tr>
+            <tr><th scope="row">에어서스펜션</th><td class="ok">장착</td></tr>
+            <tr><th scope="row">보유 대수</th><td><span class="blank">확인 중</span></td></tr>
+          </table>
+        </div>
+      </article>
+    </div>
+
+    <div class="ruler" aria-labelledby="ruler-h">
+      <h3 id="ruler-h">적재함 길이로 비교해 보세요</h3>
+      <p>아래 '상담 내용 정리'에 장비 길이를 넣으면 눈금자에 표시됩니다. 확인된 제원만 그렸습니다.</p>
+      <div class="ruler-scale" id="ruler" role="img" aria-label="적재함 길이 자: 5톤 적재함 6.5미터. 다른 차급은 확인 중">
+        <div class="ruler-axis"></div>
+        <div class="bar" style="width:65%">5톤 적재함 <span class="num">6.5 m</span></div>
+        <div class="tick" style="left:0"></div><span class="tick-l" style="left:0">0</span>
+        <div class="tick" style="left:20%"></div><span class="tick-l" style="left:20%">2 m</span>
+        <div class="tick" style="left:40%"></div><span class="tick-l" style="left:40%">4 m</span>
+        <div class="tick" style="left:60%"></div><span class="tick-l" style="left:60%">6 m</span>
+        <div class="tick" style="left:80%"></div><span class="tick-l" style="left:80%">8 m</span>
+        <div class="tick" style="left:calc(100% - 1px)"></div><span class="tick-l" style="left:calc(100% - 1px)">10 m</span>
+        <div class="cargo-mark" id="cargoMark"><span id="cargoMarkText">장비</span></div>
+      </div>
+      <div class="ruler-legend"><span>1.4톤 · 3.5톤 · 11톤 적재함 길이 <span class="blank">확인 중</span></span></div>
+    </div>
+    <div class="ask"><p>우리 장비가 어느 차에 맞을지 모르겠다면 크기만 알려 주세요.</p><a class="btn btn-call" href="tel:010-5256-2425" data-track="contact_call" data-where="fleet">전화 상담</a><span class="num nowrap">010-5256-2425</span></div>
+  </div>
+</section>
+
+<section class="alt" id="plan" aria-labelledby="plan-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">상담 내용 정리</p>
+      <h2 id="plan-h">아는 만큼만 적으면 상담 문자가 만들어집니다</h2>
+      <p>장비 크기와 현장 조건을 미리 알려 주시면 맞는 차량과 견적을 더 정확히 안내받을 수 있습니다. 모르는 칸은 비워 두세요.</p>
+      <button type="button" class="btn btn-line ex-btn" id="exBtn">예시로 채워 보기</button>
+    </div>
+    <div class="planner">
+      <form class="form" id="planForm" novalidate>
+        <fieldset>
+          <legend>무엇을 옮기나요?</legend>
+          <div class="seg">
+            <label><input type="radio" name="kind" id="k1" value="반도체 장비" checked><span>반도체 장비</span></label>
+            <label><input type="radio" name="kind" id="k2" value="의료기기"><span>의료기기</span></label>
+            <label><input type="radio" name="kind" id="k3" value="서버·서버랙"><span>서버·서버랙</span></label>
+            <label><input type="radio" name="kind" id="k4" value="연구·실험 장비"><span>연구·실험 장비</span></label>
+            <label><input type="radio" name="kind" id="k5" value="미술품·조형물·유물"><span>미술품·유물</span></label>
+            <label><input type="radio" name="kind" id="k6" value="로봇·위성장비"><span>로봇·위성장비</span></label>
+            <label><input type="radio" name="kind" id="k7" value="기타"><span>기타</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="name">장비 이름·모델 <span class="opt">(선택)</span></label>
+          <input type="text" id="name" placeholder="예: 웨이퍼 검사장비" autocomplete="off">
+        </div>
+        <fieldset>
+          <legend>크기 (cm) <span class="opt">길이 × 폭 × 높이, 아는 것만</span></legend>
+          <div class="dims">
+            <div class="field"><label for="dl">길이</label><input type="number" id="dl" inputmode="numeric" min="0" placeholder="예: 180"></div>
+            <div class="field"><label for="dw">폭</label><input type="number" id="dw" inputmode="numeric" min="0" placeholder="예: 120"></div>
+            <div class="field"><label for="dh">높이</label><input type="number" id="dh" inputmode="numeric" min="0" placeholder="예: 190"></div>
+          </div>
+        </fieldset>
+        <div class="row">
+          <div class="field"><label for="kg">무게 (kg) <span class="opt">(선택)</span></label><input type="number" id="kg" inputmode="numeric" min="0" placeholder="예: 900"></div>
+          <div class="field"><label for="qty">수량</label><input type="number" id="qty" inputmode="numeric" min="1" placeholder="1"></div>
+          <div class="field"><label for="date">희망 날짜</label><input type="date" id="date"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="from">출발지</label><input type="text" id="from" placeholder="예: 경기 평택" autocomplete="off"></div>
+          <div class="field"><label for="to">도착지</label><input type="text" id="to" placeholder="예: 충북 청주" autocomplete="off"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="door">반입 문 폭×높이 (cm) <span class="opt">(선택)</span></label><input type="text" id="door" placeholder="예: 150×210" autocomplete="off"></div>
+          <div class="field"><label for="elev">엘리베이터 문·하중 <span class="opt">(선택)</span></label><input type="text" id="elev" placeholder="예: 110cm·1t" autocomplete="off"></div>
+        </div>
+        <fieldset>
+          <legend>현장 조건 <span class="opt">해당하는 것 모두</span></legend>
+          <div class="checks">
+            <label><input type="checkbox" id="c1" value="출발지 지게차 없음">출발지에 지게차 없음</label>
+            <label><input type="checkbox" id="c2" value="도착지 지게차 없음">도착지에 지게차 없음</label>
+            <label><input type="checkbox" id="c3" value="엘리베이터 이용 필요">엘리베이터로 옮겨야 함</label>
+            <label><input type="checkbox" id="c4" value="계단·턱 있음">계단·턱이 있음</label>
+            <label><input type="checkbox" id="c5" value="클린룸 반입">클린룸 반입</label>
+            <label><input type="checkbox" id="c6" value="온습도 관리·기록 필요">온습도 관리·기록 필요</label>
+            <label><input type="checkbox" id="c7" value="포장 필요">포장이 필요함</label>
+            <label><input type="checkbox" id="c8" value="급한 일정(긴급 배차)">급한 일정 (긴급 배차)</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="memo">더 알려 주실 것 <span class="opt">(선택)</span></label>
+          <textarea id="memo" placeholder="예: 반입 시간 제한 있음 (오전 9~11시)"></textarea>
+        </div>
+        <fieldset>
+          <legend>나라트랜스에 처음 맡기시나요?</legend>
+          <div class="seg">
+            <label><input type="radio" name="first" id="f1" value="처음 맡겨 봅니다"><span>처음 맡겨 봅니다</span></label>
+            <label><input type="radio" name="first" id="f2" value="전에 맡긴 적 있습니다"><span>전에 맡긴 적 있습니다</span></label>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="out" aria-labelledby="out-h">
+        <p class="tag">자동으로 정리된 상담 문자</p>
+        <h3 id="out-h">이 내용을 보내 주세요</h3>
+        <pre class="msg" id="msg" aria-live="polite"></pre>
+        <p class="hint" id="hint" hidden></p>
+        <div class="btns">
+          <button type="button" class="btn btn-call" id="copyBtn" data-track="contact_copy" data-where="planner">문자 내용 복사</button>
+          <a class="btn btn-line" id="smsBtn" href="sms:01052562425" data-track="contact_sms" data-where="planner">문자 앱 열기</a>
+        </div>
+        <p class="copied" id="copied" role="status"></p>
+        <p class="after">받는 번호 <b class="num nowrap">010-5256-2425</b> (김준수 대표)<br>장비 사진이나 도면이 있으면 문자에 함께 붙여 보내 주세요.<br>회신 방식·시간 <span class="blank">확인 중</span></p>
+        <p class="after">입력하신 내용은 저장하지 않고, 어디에도 보내지 않습니다.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="process" aria-labelledby="process-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">진행 과정</p>
+      <h2 id="process-h">상담부터 현장 반입까지, 네 단계</h2>
+      <p>포장·상하차·현장 반입을 함께 지원합니다. 전국으로 운송합니다.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <figure><div class="callbox"><small>대표 직통</small><b>010-5256-2425</b><small>화물·일정·현장 조건 확인</small></div></figure>
+        <span class="k">01</span><h3>상담</h3>
+        <p>장비 크기·무게, 출발·도착지, 현장 조건을 듣고 맞는 차량과 일정을 정합니다.</p>
+      </li>
+      <li>
+        <figure><img src="img/v3-p-crate2.webp" width="1000" height="667" alt="에어캡으로 감싸 나무 틀에 고정한 장비" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <span class="k">02</span><h3>포장</h3>
+        <p>필요하면 장비 포장을 지원합니다.</p>
+      </li>
+      <li>
+        <figure><img src="img/v3-p-truck.webp" width="1000" height="642" alt="흰색 탑차가 건물 하역장 옆에 서 있는 모습" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <span class="k">03</span><h3>상차·무진동 운송</h3>
+        <p>리프트로 싣고, 에어서스펜션 차량으로 충격을 줄여 운송합니다.</p>
+      </li>
+      <li>
+        <figure><img src="img/v3-p-lift.webp" width="800" height="600" alt="탑차 뒤 리프트를 바닥까지 내린 모습" loading="lazy" decoding="async"><span class="ref">참고 이미지</span></figure>
+        <span class="k">04</span><h3>리프트 하차·현장 반입</h3>
+        <p>도착지에서 리프트로 내리고, 현장 반입을 지원합니다.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt draft-only" id="case" aria-labelledby="case-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">작업 사례</p>
+      <h2 id="case-h">이렇게 옮겼습니다</h2>
+      <p>사장님께 실제 작업 기록을 받으면 이 형식으로 채웁니다.</p>
+    </div>
+    <article class="case sample-box">
+      <span class="sample">샘플 형식 · 실제 사례 아님</span>
+      <dl>
+        <dt>날짜·분야</dt><dd><span class="blank">예: 2026년 ○월 · 대학 연구소 이전</span></dd>
+        <dt>과제</dt><dd><span class="blank">예: 엘리베이터 없는 3층 실험실에서 분석 장비 반출</span></dd>
+        <dt>고객 요구</dt><dd><span class="blank">예: 운송 중 온습도 기록 제출</span></dd>
+        <dt>진행</dt><dd><span class="blank">포장 → 리프트 상차 → 무진동 운송 → 반입</span></dd>
+        <dt>차량·장비</dt><dd><span class="blank">예: 5톤 특수무진동 리프트</span></dd>
+        <dt>결과</dt><dd><span class="blank">확인된 숫자만 (소요 시간, 기록 제출 여부 등)</span></dd>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">자주 묻는 질문</p>
+      <h2 id="faq-h">맡기기 전에 많이 물어보십니다</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>일반 화물차(용달)와 무엇이 다른가요?</summary>
+        <div class="a"><p>모든 차량에 노면 충격을 줄이는 에어서스펜션과 리프트가 있습니다. 온도·습도를 제어하고 기록할 수 있고, 포장·상하차·현장 반입까지 지원합니다. 적재물배상책임보험 10억 원에 가입되어 있습니다.</p></div>
+      </details>
+      <details>
+        <summary>운송 중 파손되면 어떻게 되나요?</summary>
+        <div class="a"><p>가입한 적재물배상책임보험(10억 원)의 약관에 따라 보상 절차를 진행합니다.</p><p>보험사, 1건당 보상 한도, 증권 사본 제공 여부: <span class="blank">확인 중</span></p></div>
+      </details>
+      <details>
+        <summary>지게차가 없는 현장도 되나요?</summary>
+        <div class="a"><p>모든 차량에 리프트가 있어, 리프트가 들 수 있는 무게와 크기의 장비는 지게차 없이 싣고 내릴 수 있습니다. 가능 여부는 상담 때 장비 무게·크기를 듣고 확인해 드립니다.</p><p>리프트 최대 하중: <span class="blank">확인 중</span></p></div>
+      </details>
+      <details>
+        <summary>온도·습도에 민감한 장비도 되나요?</summary>
+        <div class="a"><p>온도·습도를 제어하고 기록할 수 있습니다. 기록이 필요하면 상담 때 말씀해 주세요.</p><p>가능한 차량과 기록 제공 방식: <span class="blank">확인 중</span></p></div>
+      </details>
+      <details>
+        <summary>급하게 옮겨야 하는데 가능할까요?</summary>
+        <div class="a"><p>긴급 배차를 지원합니다. 전화 주시면 가능한 차량과 시간을 확인해 드립니다.</p></div>
+      </details>
+      <details>
+        <summary>지방도 가나요?</summary>
+        <div class="a"><p>전국으로 운송합니다. 출발지와 도착지, 희망 날짜를 알려 주시면 가능한 차량과 일정을 확인해 드립니다.</p></div>
+      </details>
+      <details>
+        <summary>처음 맡기는데 무엇을 준비하면 되나요?</summary>
+        <div class="a"><p>장비 이름과 대략적인 크기·무게, 출발·도착지, 희망 날짜를 알려 주세요. 모르는 것은 비워도 됩니다. 위 '상담 내용 정리'에 적어 문자로 보내시면 편합니다.</p></div>
+      </details>
+      <details class="draft-only">
+        <summary>세금계산서 발행이 되나요?</summary>
+        <div class="a"><p><span class="blank">사장님 확인 중 (발행 여부, 법인 카드 결제 등)</span></p></div>
+      </details>
+      <details class="draft-only">
+        <summary>상담부터 운송까지 얼마나 걸리나요?</summary>
+        <div class="a"><p><span class="blank">사장님 확인 중 (예: 견적 회신, 배차까지 걸리는 시간)</span></p></div>
+      </details>
+      <details>
+        <summary>비용은 어떻게 정해지나요?</summary>
+        <div class="a"><p>화물 크기·무게, 출발·도착지, 날짜, 현장 조건을 듣고 견적을 안내해 드립니다. 위 '상담 내용 정리'로 보내 주시면 빠릅니다.</p><p>견적에 영향을 주는 요소(대기, 야간, 경유 등)와 대표 운송 예시 요금: <span class="blank">사장님 공개 동의 시 기재</span></p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap grid">
+    <div>
+      <p class="motto-c">정성을 다합니다.</p>
+      <h2 id="contact-h">대표와 직접 상담하세요</h2>
+      <p>김준수 대표의 휴대폰 번호입니다. 화물과 현장 조건을 말씀해 주시면 맞는 차량과 일정을 안내해 드립니다.</p>
+      <p>통화가 어려울 때 <span class="blank">회신 방식·시간 확인 중</span></p>
+      <a class="big-tel" href="tel:010-5256-2425" data-track="contact_call" data-where="contact">010<span>-</span>5256<span>-</span>2425</a>
+      <div class="cta">
+        <a class="btn btn-call" href="tel:010-5256-2425" data-track="contact_call" data-where="contact-btn">전화 상담</a>
+        <a class="btn btn-line" href="#plan">상담 내용 정리하기</a>
+      </div>
+    </div>
+    <ul>
+      <li><span>상담 시간</span><span><span class="blank">확인 중</span></span></li>
+      <li><span>이메일</span><span>kjs242424@gmail.com</span></li>
+      <li><span>카카오톡</span><span><span class="blank">채널 확인 중</span></span></li>
+      <li><span>운송 지역</span><span>전국 · 긴급 배차 지원</span></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <dl>
+      <dt>상호</dt><dd>나라트랜스 (대한민국특수화물운송팀)</dd>
+      <dt>대표</dt><dd>김준수</dd>
+      <dt>전화</dt><dd class="num">010-5256-2425</dd>
+      <dt>이메일</dt><dd>kjs242424@gmail.com</dd>
+      <dt>사업자등록번호</dt><dd><span class="blank">받는 중</span></dd>
+      <dt>화물운송 허가</dt><dd><span class="blank">받는 중</span></dd>
+      <dt>주소</dt><dd><span class="blank">받는 중</span></dd>
+    </dl>
+    <p>사진은 모두 참고 이미지(Unsplash 무료 사진)이며 나라트랜스 보유 차량이나 실제 작업 사진이 아닙니다.</p>
+    <p>마지막 업데이트 <span class="num">2026-10-21</span></p>
+  </div>
+</footer>
+
+<div class="callbar" id="callbar">
+  <a href="tel:010-5256-2425" data-track="contact_call" data-where="callbar" tabindex="-1">
+    <span class="l">무진동 운송 상담<small>김준수 대표 직통</small></span>
+    <span class="r">010-5256-2425</span>
+  </a>
+</div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var form=$('planForm'), msg=$('msg'), hint=$('hint'), mark=$('cargoMark'), markText=$('cargoMarkText');
+  // 예시 날짜: 2주 뒤
+  function v(id){var el=$(id);return el&&el.value?String(el.value).trim():''}
+  function build(){
+    var kind=(form.querySelector('input[name=kind]:checked')||{}).value||'';
+    var first=(form.querySelector('input[name=first]:checked')||{}).value||'';
+    var L=+v('dl')||0,W=+v('dw')||0,H=+v('dh')||0;
+    var dims=[L?'길이 '+L:'',W?'폭 '+W:'',H?'높이 '+H:''].filter(Boolean).join(' × ');
+    var checks=[].slice.call(form.querySelectorAll('.checks input:checked')).map(function(c){return c.value});
+    var lines=['[나라트랜스 운송 상담]','화물: '+kind+(v('name')?' / '+v('name'):'')];
+    if(dims)lines.push('크기(cm): '+dims);
+    if(v('kg'))lines.push('무게: '+v('kg')+'kg');
+    lines.push('수량: '+(v('qty')||'1'));
+    if(v('from')||v('to'))lines.push('구간: '+(v('from')||'?')+' → '+(v('to')||'?'));
+    if(v('date'))lines.push('희망 날짜: '+v('date'));
+    if(checks.length)lines.push('현장 조건: '+checks.join(', '));
+    if(v('door'))lines.push('반입 문(폭×높이): '+v('door')+'cm');
+    if(v('elev'))lines.push('엘리베이터: '+v('elev'));
+    if(v('memo'))lines.push('메모: '+v('memo'));
+    if(first)lines.push(first);
+    var text=lines.join('\n');
+    msg.textContent=text;
+    $('smsBtn').setAttribute('href','sms:01052562425?body='+encodeURIComponent(text));
+    // 확인된 제원(5톤 적재함 6.5m)과 길이 비교만 안내. 판정하지 않음.
+    if(L>0){
+      var pct=Math.min(L/1000*100,100);
+      mark.style.display='block';mark.style.left='calc('+pct+'% - 1px)';
+      markText.textContent='입력한 장비 '+(L/100).toFixed(1)+' m';markText.style.left=pct>55?'auto':'0';markText.style.right=pct>55?'0':'auto';
+      if(L>650){hint.hidden=false;hint.textContent='입력한 길이('+(L/100).toFixed(1)+' m)가 5톤 적재함 길이 6.5 m보다 깁니다. 다른 차급으로 가능한지 상담 때 확인해 드립니다.';}
+      else{hint.hidden=true;}
+    }else{mark.style.display='none';hint.hidden=true;}
+  }
+  $('exBtn').addEventListener('click',function(){
+    var ex={name:'웨이퍼 검사장비',dl:180,dw:120,dh:190,kg:900,qty:1,from:'경기 평택',to:'충북 청주',door:'150×210',elev:'',memo:'반입 시간 제한 있음 (오전 9~11시)'};
+    for(var k in ex){$(k).value=ex[k];}
+    $('k1').checked=true;$('c1').checked=true;$('c6').checked=true;$('f1').checked=true;
+    try{var d=new Date();d.setDate(d.getDate()+14);$('date').value=d.toISOString().slice(0,10);}catch(e){}
+    build();$('plan').scrollIntoView({block:'start'});
+  });
+  form.addEventListener('input',build);form.addEventListener('change',build);
+  form.addEventListener('submit',function(e){e.preventDefault()});
+  build();
+  $('copyBtn').addEventListener('click',function(){
+    var text=msg.textContent, done=function(ok){$('copied').textContent=ok?'복사했습니다. 문자 앱에 붙여 넣어 010-5256-2425로 보내 주세요.':'아래 내용을 길게 눌러 직접 복사해 주세요.'};
+    var sel=function(){try{var r=document.createRange();r.selectNodeContents(msg);var s=getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){done(true)},function(){sel();done(false)});}
+    else{sel();done(false);}
+  });
+  // 하단 전화 바: 첫 화면 전화 버튼이 보이는 동안 숨김
+  var bar=$('callbar'), heroCall=$('heroCall'), contact=$('contact');
+  if('IntersectionObserver' in window){
+    var heroVis=true, contactVis=false;
+    var upd=function(){var show=!heroVis&&!contactVis;bar.classList.toggle('show',show);bar.querySelector('a').tabIndex=show?0:-1;};
+    new IntersectionObserver(function(es){heroVis=es[0].isIntersecting;upd();}).observe(heroCall);
+    new IntersectionObserver(function(es){contactVis=es[0].isIntersecting;upd();},{rootMargin:'0px 0px -30% 0px'}).observe(contact);
+  }else{bar.classList.add('show');bar.querySelector('a').tabIndex=0;}
+  // 측정(분석 도구 연결 시에만 동작). 전화번호·입력 내용은 보내지 않음.
+  document.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('[data-track]');if(el&&window.gtag)window.gtag('event',el.dataset.track,{location:el.dataset.where||''});});
+})();
+</script>
+
+</body>
+</html>
