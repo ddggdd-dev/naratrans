@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="check" content="no-tel">
 <title>나라트랜스 홈페이지 제작 안내</title>
-<meta name="description" content="나라트랜스 홈페이지의 목표, 만드는 기준, 진행 방식, 오픈 후 관리, 대표님께 부탁드릴 것을 정리한 안내 문서입니다.">
+<meta name="description" content="나라트랜스 홈페이지 제작 안내: 한눈에 요약과 대표님께 부탁드릴 정보 입력.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="나라트랜스 홈페이지 제작 안내">
-<meta property="og:description" content="홈페이지의 목표, 만드는 기준, 진행 방식과 부탁드릴 것">
+<meta property="og:description" content="한눈에 요약, 그리고 칸만 채워 보내시면 되는 정보 입력">
 <meta property="og:url" content="https://ddggdd-dev.github.io/naratrans/guide/">
 <meta property="og:image" content="https://ddggdd-dev.github.io/naratrans/v3/img/v3-og.jpg">
 <link rel="icon" href="../v3/img/v3-logo.webp">
@@ -16,156 +17,301 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap">
 <style>
-:root{--paper:#F4F6F9;--surface:#FFFFFF;--ink:#0F1E36;--muted:#4A5872;--line:#D3DAE5;--band:#13284A;--band-ink:#F2F5FA;--band-muted:#B7C4D9;--mark:#2F5D9E;--call:#C2410C;color-scheme:light;
+:root{--paper:#F4F6F9;--surface:#FFFFFF;--ink:#0F1E36;--muted:#4A5872;--line:#D3DAE5;--band:#13284A;--band-ink:#F2F5FA;--band-muted:#B7C4D9;--mark:#2F5D9E;--call:#C2410C;--glow:#FF9A52;color-scheme:light;
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root{--paper:#0B1322;--surface:#121D31;--ink:#E6ECF5;--muted:#A3B2C8;--line:#26354F;--band:#0E1F3B;--mark:#8FB2EA;--call:#D2550D;color-scheme:dark}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;font-size:1.0625rem;line-height:1.75;word-break:keep-all;overflow-wrap:anywhere}
-.top{background:var(--band);color:var(--band-ink)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;font-size:1.0625rem;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
 .wrap{max-width:46rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.top .wrap{padding-block:40px 32px}
-.top img{width:48px;height:48px;border-radius:50%;display:block;margin-bottom:16px}
-.top p{margin:0;color:var(--band-muted);font-size:.9375rem}
-h1{font-size:clamp(1.75rem,1.3rem + 1.8vw,2.5rem);line-height:1.25;margin:8px 0 12px;letter-spacing:-.015em}
-.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.links a{display:inline-flex;align-items:center;min-height:48px;padding:10px 18px;border-radius:6px;font-weight:700;text-decoration:none}
-.links .p{background:var(--call);color:#fff}
-.links .s{border:2px solid var(--band-ink);color:var(--band-ink)}
-main .wrap{padding-block:16px 96px}
-section{padding-top:40px}
-h2{font-size:1.5rem;line-height:1.35;margin:0 0 12px;display:flex;align-items:center;gap:10px}
-h2::before{content:"";width:22px;height:2px;background:var(--mark);flex:none}
-p{margin:0 0 14px}
-.tbl{overflow-x:auto;margin:16px 0}
-table{border-collapse:collapse;width:100%;font-size:.9688rem;background:var(--surface)}
-th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.6}
-th{background:var(--paper);font-weight:600}
-ol,ul{padding-left:1.4em;margin:0 0 14px}
-li{margin-bottom:8px}
-ul.check{list-style:none;padding-left:0}
-ul.check li{padding-left:30px;position:relative}
-ul.check li::before{content:"";position:absolute;left:0;top:.35em;width:18px;height:18px;border:2px solid var(--muted);border-radius:4px}
-.note{color:var(--muted);font-size:.9375rem}
-footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);font-size:.9375rem}
+:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
 a{color:var(--mark)}
+.top{background:var(--band);color:var(--band-ink)}
+.top .wrap{padding-block:32px 32px}
+.top img{width:44px;height:44px;border-radius:50%;display:block;margin-bottom:12px}
+.top .meta{margin:0;color:var(--band-muted);font-size:.9375rem}
+h1{font-size:clamp(1.625rem,1.3rem + 1.6vw,2.25rem);line-height:1.25;margin:6px 0 16px;letter-spacing:-.015em}
+.sum{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sum li{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.16)}
+.sum b{color:var(--glow);font-size:.9375rem}
+.sum span{color:var(--band-ink)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;border-radius:6px;font-weight:700;text-decoration:none;font-family:inherit;font-size:1rem;cursor:pointer;border:2px solid transparent}
+.btn-p{background:var(--call);color:#fff}
+.btn-s{border-color:currentColor;color:inherit;background:transparent}
+.top .btn-s{color:var(--band-ink)}
+main .wrap{padding-block:8px 64px}
+section{padding-top:40px}
+h2{font-size:1.375rem;line-height:1.35;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 20px}
+fieldset{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:16px;margin:0 0 16px;min-width:0}
+legend{font-weight:700;padding:0 6px;font-size:1.0625rem}
+.why{margin:0 0 4px;color:var(--muted);font-size:.875rem;line-height:1.5}
+.f{display:flex;flex-direction:column;gap:6px;margin-top:12px;min-width:0}
+.f>label,.f>span{font-size:.9375rem;font-weight:600}
+input[type=text],input[type=date],textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:4px;min-height:48px;padding:10px 12px;width:100%}
+textarea{min-height:84px;resize:vertical}
+input:focus,textarea:focus{border-color:var(--ink);outline:none;box-shadow:0 0 0 3px rgba(194,65,12,.25)}
+::placeholder{color:var(--muted);opacity:.85}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;width:100%;height:100%;cursor:pointer}
+.seg span{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:.9375rem;background:var(--paper)}
+.seg input:checked+span{background:var(--ink);color:var(--surface);border-color:var(--ink);font-weight:600}
+.seg input:focus-visible+span{outline:3px solid var(--glow);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px}
+.veh{display:grid;grid-template-columns:3.6em minmax(0,2.2fr) minmax(0,1fr);gap:8px;align-items:center;margin-top:8px}
+.veh b{font-size:.9375rem}
+.chk{display:flex;align-items:center;gap:10px;min-height:44px;font-size:.9688rem}
+.chk input{width:20px;height:20px;accent-color:var(--call)}
+.out{background:var(--band);color:var(--band-ink);border-radius:8px;padding:16px;margin-top:8px}
+.out h2{color:var(--band-ink)}
+.msg{white-space:pre-wrap;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:12px;margin:12px 0;font:inherit;font-size:.9375rem;min-height:120px}
+.out p{margin:0;color:var(--band-muted);font-size:.9375rem}
+.copied{color:var(--glow)!important;min-height:1.5em;margin-top:8px!important}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:16px 36px 16px 0;font-weight:700;list-style:none;position:relative;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:12px;font-size:1.5rem;color:var(--muted)}
+details[open] summary::after{content:"−"}
+details .in{padding-bottom:16px}
+details p{margin:0 0 12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:.9375rem;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--paper)}
+ol,ul{padding-left:1.3em;margin:0 0 12px}
+li{margin-bottom:6px}
+footer{color:var(--muted);font-size:.9375rem;padding-block:24px}
 </style>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
-    <img src="../v3/img/v3-logo.webp" alt="" width="48" height="48">
-    <p>2026년 10월 21일 · 나라트랜스 홈페이지 제작팀</p>
-    <h1>나라트랜스 홈페이지 제작 안내</h1>
-    <p>김준수 대표님, 안녕하세요. 나라트랜스 홈페이지를 만드는 제작팀(고성식·장남덕·진호)입니다.</p>
-    <div class="links">
-      <a class="p" href="../v3/">새 시안(v3) 보기</a>
+    <img src="../v3/img/v3-logo.webp" alt="" width="44" height="44">
+    <p class="meta">2026년 10월 22일 · 나라트랜스 홈페이지 제작팀(고성식·장남덕·진호)</p>
+    <h1>김준수 대표님, 한눈에 정리했습니다</h1>
+    <ul class="sum">
+      <li><b>목표</b><span>장비 담당자가 첫 화면만 보고 믿고, 바로 대표님께 전화하게 만듭니다.</span></li>
+      <li><b>약속</b><span>확인된 사실만 씁니다. 과장하는 말은 쓰지 않습니다.</span></li>
+      <li><b>하실 일</b><span>아래 칸을 아시는 만큼 채워 보내 주시고, 시안을 보고 "좋다 / 고쳐 달라"만 말씀해 주세요.</span></li>
+      <li><b>일정</b><span>정보와 사진을 받은 날부터 일주일 안에 공개합니다.</span></li>
+      <li><b>공개 후</b><span>매주 사이트를 점검하고, 매달 문의 수와 검색 노출을 보고드립니다.</span></li>
+    </ul>
+    <div class="btns">
+      <a class="btn btn-p" href="#form">정보 입력하기</a>
+      <a class="btn btn-s" href="../v3/">새 시안 보기</a>
     </div>
   </div>
 </header>
+
 <main>
   <div class="wrap">
-    <section>
-      <p>새 시안(v3)과 함께 이 문서를 드립니다. 홈페이지가 무엇을 목표로 하는지, 어떤 기준으로 만드는지, 오픈한 뒤 어떻게 관리하는지 정리했습니다. 대표님은 시안을 보시고 "좋다" 또는 "여기 고쳐 달라"만 말씀해 주시면 됩니다.</p>
+    <section id="form" aria-labelledby="form-h">
+      <h2 id="form-h">대표님께 부탁드릴 정보</h2>
+      <p class="lead">급한 것부터 순서대로입니다. 모르는 칸은 비워 두세요. 다 채우면 아래에 문자가 만들어지고, 복사해서 카톡으로 보내 주시면 됩니다.</p>
+      <form id="f" novalidate>
+        <fieldset>
+          <legend>1. 사업자 정보</legend>
+          <p class="why">담당자가 윗선에 보고할 때 가장 먼저 찾습니다. 검색 등록에도 필요합니다.</p>
+          <div class="grid">
+            <div class="f"><label for="bizno">사업자등록번호</label><input type="text" id="bizno" inputmode="numeric" placeholder="000-00-00000" data-k="사업자등록번호"></div>
+            <div class="f"><label for="addr">사업장 주소</label><input type="text" id="addr" placeholder="예: 경기 평택시 ○○로" data-k="사업장 주소"></div>
+          </div>
+          <div class="f"><span id="addrpub-l">주소를 홈페이지에 보여도 될까요?</span><div class="seg" role="radiogroup" aria-labelledby="addrpub-l">
+            <label><input type="radio" name="주소 공개" id="ap1" value="시·군까지만"><span>시·군까지만</span></label>
+            <label><input type="radio" name="주소 공개" id="ap2" value="전체 공개"><span>전체 공개</span></label>
+            <label><input type="radio" name="주소 공개" id="ap3" value="비공개"><span>비공개</span></label></div></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. 화물운송 허가</legend>
+          <p class="why">허가번호를 적는 운송 업체가 거의 없어 차별점이 됩니다.</p>
+          <div class="seg" role="radiogroup" aria-label="화물운송 허가 여부">
+            <label><input type="radio" name="화물운송 허가" id="lc1" value="있음"><span>있음</span></label>
+            <label><input type="radio" name="화물운송 허가" id="lc2" value="없음"><span>없음</span></label>
+            <label><input type="radio" name="화물운송 허가" id="lc3" value="잘 모름"><span>잘 모름</span></label></div>
+          <div class="f"><label for="licno">허가번호 <span style="font-weight:400;color:var(--muted)">(있으면)</span></label><input type="text" id="licno" data-k="허가번호"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. 실제 차량·현장 사진</legend>
+          <p class="why">지금 시안 사진은 참고 사진입니다. 실제 사진이 가장 큰 무기입니다.</p>
+          <div class="seg" role="radiogroup" aria-label="사진 보내실 방법">
+            <label><input type="radio" name="사진" id="ph1" value="카톡으로 보내겠음"><span>카톡으로 보낼게요</span></label>
+            <label><input type="radio" name="사진" id="ph2" value="사진통으로 찍어 보내겠음"><span>사진통으로 찍어 보낼게요</span></label>
+            <label><input type="radio" name="사진" id="ph3" value="촬영하러 와 주세요"><span>찍으러 와 주세요</span></label></div>
+          <div class="f"><label for="shoot">찍으러 오면 좋은 날 <span style="font-weight:400;color:var(--muted)">(선택)</span></label><input type="date" id="shoot" data-k="촬영 희망일"></div>
+          <p class="lead" style="margin:12px 0 0;font-size:.9375rem">찍을 것: 차급별 차량(옆·앞), 리프트를 내린 모습, 적재함 안쪽, 싣고 내리는 모습, 대표님(원하시면)</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. 보험</legend>
+          <p class="why">"10억 원"이 정확히 무엇인지 적어야 담당자가 믿습니다.</p>
+          <div class="f"><label for="insco">보험사 이름</label><input type="text" id="insco" data-k="보험사"></div>
+          <div class="f"><span id="inslim-l">10억 원은</span><div class="seg" role="radiogroup" aria-labelledby="inslim-l">
+            <label><input type="radio" name="보험 10억" id="il1" value="사고 1건당 한도"><span>사고 1건당 한도</span></label>
+            <label><input type="radio" name="보험 10억" id="il2" value="1년 전체 한도"><span>1년 전체 한도</span></label>
+            <label><input type="radio" name="보험 10억" id="il3" value="잘 모름"><span>잘 모름</span></label></div></div>
+          <div class="f"><span id="inscp-l">증권 사본을 고객에게 보여줄 수 있나요?</span><div class="seg" role="radiogroup" aria-labelledby="inscp-l">
+            <label><input type="radio" name="증권 사본" id="ic1" value="보여줄 수 있음"><span>예</span></label>
+            <label><input type="radio" name="증권 사본" id="ic2" value="어려움"><span>아니오</span></label></div></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. 차량 제원</legend>
+          <p class="why">고객이 "우리 장비가 들어가나"를 바로 판단할 수 있게 합니다.</p>
+          <div class="veh"><span></span><b>적재함 길이×폭×높이(m)</b><b>대수</b></div>
+          <div class="veh"><b>1.4톤</b><input type="text" id="v14" aria-label="1.4톤 적재함 크기" placeholder="예: 3.1×1.6×1.8" data-k="1.4톤 적재함"><input type="text" id="n14" aria-label="1.4톤 대수" placeholder="대" data-k="1.4톤 대수"></div>
+          <div class="veh"><b>3.5톤</b><input type="text" id="v35" aria-label="3.5톤 적재함 크기" data-k="3.5톤 적재함"><input type="text" id="n35" aria-label="3.5톤 대수" placeholder="대" data-k="3.5톤 대수"></div>
+          <div class="veh"><b>5톤</b><input type="text" id="v5" aria-label="5톤 적재함 크기" placeholder="길이 6.5m" data-k="5톤 적재함"><input type="text" id="n5" aria-label="5톤 대수" placeholder="대" data-k="5톤 대수"></div>
+          <div class="veh"><b>11톤</b><input type="text" id="v11" aria-label="11톤 적재함 크기" data-k="11톤 적재함"><input type="text" id="n11" aria-label="11톤 대수" placeholder="대" data-k="11톤 대수"></div>
+          <div class="grid" style="margin-top:4px">
+            <div class="f"><label for="lift">리프트 최대 하중</label><input type="text" id="lift" placeholder="예: 1톤" data-k="리프트 최대 하중"></div>
+            <div class="f"><span id="l21-l">5톤 "리프트 2.1M"는</span><div class="seg" role="radiogroup" aria-labelledby="l21-l">
+              <label><input type="radio" name="5톤 리프트 2.1M" id="l1" value="폭"><span>폭</span></label>
+              <label><input type="radio" name="5톤 리프트 2.1M" id="l2" value="길이(깊이)"><span>길이</span></label>
+              <label><input type="radio" name="5톤 리프트 2.1M" id="l3" value="높이"><span>높이</span></label></div></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. 상담 시간과 회신</legend>
+          <p class="why">"연락하면 언제 답이 오는지"를 적으면 문의가 늘어납니다.</p>
+          <div class="grid">
+            <div class="f"><label for="hours">전화 상담 가능 시간</label><input type="text" id="hours" placeholder="예: 매일 07~21시" data-k="상담 시간"></div>
+            <div class="f"><label for="reply">못 받으실 때 회신</label><input type="text" id="reply" placeholder="예: 1시간 안에 다시 전화" data-k="회신 방식"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>7. 온습도 기록</legend>
+          <div class="seg" role="radiogroup" aria-label="온습도 기록 가능 차량">
+            <label><input type="radio" name="온습도 기록" id="th1" value="모든 차량 가능"><span>모든 차량 가능</span></label>
+            <label><input type="radio" name="온습도 기록" id="th2" value="일부 차량만"><span>일부 차량만</span></label></div>
+          <div class="f"><label for="thform">기록을 드리는 방법</label><input type="text" id="thform" placeholder="예: 출력물, 엑셀 파일, 사진" data-k="온습도 기록 제공"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>8. 작업 사례 1~2건</legend>
+          <p class="why">경쟁사보다 앞서려면 실제 사례가 필요합니다. 거래처 이름은 동의받은 경우에만 씁니다.</p>
+          <div class="f"><label for="case">날짜, 무엇을, 어디서 어디로, 어떤 차로, 어려웠던 점, 결과</label><textarea id="case" placeholder="예: 10월 20일, 검사장비 1대, 평택→청주, 5톤 리프트, 엘리베이터 없는 2층 반입, 당일 완료" data-k="작업 사례"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>9. 요금과 계산서</legend>
+          <div class="f"><label for="price">홈페이지에 적어도 되는 대략적인 요금 <span style="font-weight:400;color:var(--muted)">(선택)</span></label><input type="text" id="price" placeholder="예: 수도권 1.4톤 ○○만 원부터" data-k="공개 가능 요금"></div>
+          <div class="grid" style="margin-top:4px">
+            <div class="f"><span id="tax-l">세금계산서</span><div class="seg" role="radiogroup" aria-labelledby="tax-l">
+              <label><input type="radio" name="세금계산서" id="tx1" value="발행 가능"><span>발행 가능</span></label>
+              <label><input type="radio" name="세금계산서" id="tx2" value="발행 안 함"><span>안 함</span></label></div></div>
+            <div class="f"><span id="free-l">견적 상담 비용</span><div class="seg" role="radiogroup" aria-labelledby="free-l">
+              <label><input type="radio" name="견적 상담" id="fr1" value="무료"><span>무료</span></label>
+              <label><input type="radio" name="견적 상담" id="fr2" value="유료일 때 있음"><span>유료일 때 있음</span></label></div></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>10. 그 밖에</legend>
+          <div class="f"><label for="links">카카오톡 채널·네이버 플레이스 주소 <span style="font-weight:400;color:var(--muted)">(있으면)</span></label><input type="text" id="links" data-k="카톡 채널·플레이스"></div>
+          <label class="chk"><input type="checkbox" id="logo" value="로고 원본 파일을 카톡으로 보내겠음">로고 원본 파일을 카톡으로 보낼게요</label>
+          <div class="f"><label for="etc">고칠 곳이나 하고 싶은 말씀</label><textarea id="etc" data-k="하실 말씀"></textarea></div>
+        </fieldset>
+      </form>
+
+      <div class="out" aria-labelledby="out-h">
+        <h2 id="out-h">보내실 내용</h2>
+        <pre class="msg" id="msg" aria-live="polite"></pre>
+        <button type="button" class="btn btn-p" id="copy">복사하기</button>
+        <p class="copied" id="copied" role="status"></p>
+        <p>복사한 내용을 카톡으로 장남덕 님께 보내 주세요. 입력하신 내용은 이 페이지에 저장되지 않고 어디에도 보내지지 않습니다. 명함의 계좌번호처럼 민감한 정보는 적지 않으셔도 됩니다.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>목표</h2>
-      <p>장비를 맡길 업체를 찾는 기업·기관 담당자가 <strong>첫 화면 3초 안에 "여기면 맡겨도 되겠다"고 느끼고, 30초 안에 대표님께 전화하게</strong> 만드는 것이 목표입니다.</p>
-      <p>연구소 시설팀, 병원 장비 담당, 서버실 담당, 갤러리 담당자는 업체를 고를 때 세 가지를 봅니다. 사고가 나지 않을지, 사고가 나면 누가 책임지는지, 윗선에 보고할 근거가 있는지입니다. 홈페이지의 순서도 이 질문에 맞췄습니다.</p>
-      <div class="tbl"><table>
-        <tr><th>확인하는 것</th><th>방법</th><th>언제</th></tr>
-        <tr><td>홈페이지를 보고 온 문의 수</td><td>대표님께 여쭤봄 ("홈페이지 보고 연락했다"는 전화·문자)</td><td>오픈 후 한 달, 이후 매달</td></tr>
-        <tr><td>검색에 나오는지</td><td>"나라트랜스", "무진동 운송" 같은 검색어로 네이버·구글 확인</td><td>오픈 후 매달</td></tr>
-        <tr><td>대표님이 링크를 쓰시는지</td><td>거래처에 명함처럼 링크를 보내시는지</td><td>오픈 후 한 달</td></tr>
-      </table></div>
-      <p>검색 순위와 문의 수는 약속드릴 수 없습니다. 대신 위 숫자를 매달 솔직하게 보고드리고, 그에 맞춰 고쳐 나가겠습니다.</p>
-    </section>
-
-    <section>
-      <h2>경쟁 업체를 살펴본 결과</h2>
-      <p>2026년 10월 21일, 무진동·정밀장비 운송과 실험실·서버실 이전을 하는 국내 업체 홈페이지 14곳을 열어 보고, 그중 잘 만든 3곳은 휴대폰·PC 화면을 직접 확인했습니다. 해외 정밀화물 운송 업체와 디자인 수상작도 함께 참고했습니다.</p>
-      <div class="tbl"><table>
-        <tr><th>다른 업체들의 모습</th><th>나라트랜스 홈페이지는</th></tr>
-        <tr><td>"완벽한", "파손 제로", "1위"처럼 근거 없는 말이 많음</td><td>확인된 사실만 쓰고, 보험은 "약관에 따름"처럼 정확하게 씀</td></tr>
-        <tr><td>차량은 "몇 톤 몇 대"까지만 소개</td><td>차급별 적재함 크기·리프트를 표로 보여주고, 장비 길이를 넣어 비교하는 눈금자를 둠</td></tr>
-        <tr><td>견적 문의는 빈 칸에 알아서 쓰는 방식</td><td>장비 종류·크기·현장 조건(지게차, 엘리베이터, 클린룸)을 고르면 상담 문자가 자동으로 만들어짐</td></tr>
-        <tr><td>허가번호·사업자번호를 거의 적지 않음</td><td>받는 대로 첫 화면 가까이에 공개</td></tr>
-        <tr><td>화면에 떠 있는 버튼이 여러 개라 글을 가림</td><td>휴대폰 아래 전화 바 하나만</td></tr>
-        <tr><td>첫 화면 글자가 천천히 나타나거나 영어 문구 위주</td><td>첫 화면에서 바로 무엇을 옮기는지 한글로 보임</td></tr>
-      </table></div>
-      <p>반대로 잘하는 업체들은 <strong>실제 작업 사례(날짜·장비·결과)와 요금 범위</strong>를 공개합니다. 이 부분은 대표님 자료를 받아야 따라잡을 수 있습니다(아래 '부탁드릴 것' 참고).</p>
-    </section>
-
-    <section>
-      <h2>만드는 기준 (약속)</h2>
-      <ol>
-        <li><strong>지어낸 내용은 넣지 않습니다.</strong> 경력, 숫자, 후기, 거래처, 사례는 대표님께 확인받은 것만 씁니다. "충격 없이", "100% 보장" 같은 단정하는 말도 쓰지 않습니다. 올리기 전에 자동 검사로 한 번 더 확인합니다.</li>
-        <li><strong>사진 출처를 밝힙니다.</strong> 지금 시안의 사진은 무료 참고 사진이고, 화면에 "참고 이미지"라고 적었습니다. 최종본은 나라트랜스 실제 차량과 현장 사진으로 바꿉니다.</li>
-        <li><strong>어느 화면에서든 전화로 이어집니다.</strong> 휴대폰에서는 아래에 전화 바가 있고, 전화번호는 글자로도 보입니다.</li>
-        <li><strong>빨리 열립니다.</strong> 휴대폰에서 첫 화면이 2.5초 안에 뜨도록 사진 크기를 줄였습니다. 지금 시안은 측정 도구에서 1.9초가 나왔습니다.</li>
-        <li><strong>누구나 읽기 쉽습니다.</strong> 글자 크기, 글자와 바탕의 대비, 버튼 크기를 웹 접근성 기준에 맞춥니다.</li>
-        <li><strong>검색과 카카오톡 공유에 대비합니다.</strong> 검색에 쓰이는 제목·설명과, 카톡으로 링크를 보낼 때 뜨는 사진·제목을 넣었습니다. 다만 검색 순위는 보장할 수 없습니다.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>진행 방식과 역할</h2>
-      <p>대표님은 정보와 사진을 보내 주시고, 시안을 보고 "좋다" 또는 "고쳐 달라"만 말씀해 주시면 됩니다. 나머지는 제작팀이 합니다.</p>
-      <div class="tbl"><table>
-        <tr><th>대표님</th><th>제작팀</th></tr>
-        <tr><td>아래 '부탁드릴 것'의 정보 보내기 (카톡으로 충분합니다)</td><td>경쟁 업체 조사, 시안 제작과 수정</td></tr>
-        <tr><td>차량·현장 사진 보내기, 또는 촬영 날짜 정하기</td><td>사진 고르기·보정, 필요하면 현장 촬영</td></tr>
-        <tr><td>시안 확인 후 "좋다 / 고쳐 달라"</td><td>오타·사실 확인, 속도·화면 검사</td></tr>
-        <tr><td>공개 승인</td><td>인터넷에 공개, 검색 등록 준비</td></tr>
-      </table></div>
-      <ol>
-        <li><strong>시안 확인</strong>: 지금 보내드린 v3를 휴대폰으로 열어 보시고 고칠 곳을 알려 주세요. 화면을 캡처해 동그라미를 쳐서 보내셔도 됩니다.</li>
-        <li><strong>정보·사진 받기</strong>: 주황색 점선 칸("확인 중")이 아직 받지 못한 정보입니다. 받는 대로 채웁니다.</li>
-        <li><strong>수정</strong>: 말씀하신 곳은 같은 날 고쳐 드립니다.</li>
-        <li><strong>공개</strong>: 대표님이 승인하시면 누구나 볼 수 있게 올립니다. 주황색 칸으로 남은 항목은 공개본에서 빼고 올립니다.</li>
-      </ol>
-      <p>목표 일정: 정보와 사진을 받은 날부터 일주일 안에 공개합니다.</p>
-    </section>
-
-    <section>
-      <h2>오픈 후 관리</h2>
-      <ul>
-        <li><strong>매주 자동 점검</strong>: 사이트가 잘 열리는지, 빠진 정보가 있는지 매주 월요일 아침에 확인합니다.</li>
-        <li><strong>매달 보고</strong>: 홈페이지로 온 문의 수(대표님께 여쭤봄)와 검색에 나오는지를 짧게 정리해 드립니다.</li>
-        <li><strong>바뀐 정보는 당일 반영</strong>: 차량, 전화번호, 사진이 바뀌면 알려 주신 날 고칩니다.</li>
-      </ul>
-      <p>함께 챙길 것 (대표님 명의·계정으로 하셔야 하는 일은 제작팀이 옆에서 안내합니다)</p>
-      <ul>
-        <li>대표님 명의의 홈페이지 주소(도메인) 연결</li>
-        <li>네이버·구글 검색 등록</li>
-        <li>네이버 플레이스(지도)와 카카오톡 채널 연결: 사이트 안 후기보다 플레이스 리뷰를 더 믿는 분이 많습니다.</li>
-        <li>전화 버튼을 몇 번 눌렀는지 세는 도구를 붙이면, 개인정보 처리 안내를 함께 올립니다. 전화번호나 입력하신 내용은 어디에도 보내지 않습니다.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>대표님께 부탁드릴 것</h2>
-      <p>급한 순서입니다. 아시는 것만 카톡으로 보내 주셔도 됩니다.</p>
-      <ul class="check">
-        <li><strong>사업자등록번호와 사업장 주소</strong>: 담당자가 윗선에 보고할 때 가장 먼저 찾고, 검색 등록에도 꼭 필요합니다.</li>
-        <li><strong>화물운송 허가 여부와 허가번호</strong>: 허가번호를 적는 운송 업체가 거의 없어, 있으면 바로 차별점이 됩니다.</li>
-        <li><strong>실제 차량·현장 사진</strong> (또는 촬영 날짜): 차급별 차량, 리프트를 내린 모습, 적재함 안쪽, 작업하시는 모습. 제작팀이 찍으러 갈 수도 있습니다.</li>
-        <li><strong>보험 정보</strong>: 보험사 이름, 10억 원이 사고 1건당 한도인지, 증권 사본을 보여줄 수 있는지</li>
-        <li><strong>차량 제원</strong>: 차급별 적재함 길이·폭·높이, 리프트 크기와 최대 하중, 5톤 "리프트 2.1M"가 폭인지 길이인지, 차급별 대수</li>
-        <li><strong>상담 시간과 회신 방식</strong>: 전화를 못 받으실 때 언제, 어떻게 다시 연락드리는지</li>
-        <li><strong>온습도 기록</strong>: 모든 차량에서 가능한지, 기록을 어떤 형태(출력물, 파일 등)로 드릴 수 있는지</li>
-        <li><strong>작업 사례 1~2건</strong>: 날짜, 장비, 차량, 어려웠던 점, 결과. 거래처 이름은 거래처가 동의한 경우에만 씁니다.</li>
-        <li><strong>요금 관련</strong>: 공개해도 되는 대략적인 요금, 세금계산서 발행 여부, 견적 상담이 무료인지</li>
-        <li><strong>카카오톡 채널, 네이버 플레이스 주소</strong> (있으면)</li>
-        <li><strong>로고 원본 파일</strong>: 지금은 명함 사진에서 잘라 쓰고 있습니다.</li>
-      </ul>
-      <p>명함에 있는 계좌번호처럼 민감한 정보는 홈페이지에 넣지 않기를 권합니다. 넣고 싶으시면 말씀해 주세요.</p>
-      <p>궁금하신 점은 카톡이나 이메일 답장으로, 또는 장남덕 님께 편하게 말씀해 주세요.</p>
+    <section aria-labelledby="more-h">
+      <h2 id="more-h">자세한 설명 (필요할 때만 펼쳐 보세요)</h2>
+      <details>
+        <summary>목표와 확인 방법</summary>
+        <div class="in">
+          <p>연구소 시설팀, 병원 장비 담당, 서버실 담당, 갤러리 담당자는 업체를 고를 때 세 가지를 봅니다. 사고가 나지 않을지, 나면 누가 책임지는지, 윗선에 보고할 근거가 있는지입니다. 홈페이지 순서도 이 질문에 맞췄습니다.</p>
+          <div class="tbl"><table>
+            <tr><th>확인하는 것</th><th>방법</th><th>언제</th></tr>
+            <tr><td>홈페이지를 보고 온 문의 수</td><td>대표님께 여쭤봄</td><td>오픈 후 한 달, 이후 매달</td></tr>
+            <tr><td>검색에 나오는지</td><td>"나라트랜스", "무진동 운송"으로 네이버·구글 확인</td><td>매달</td></tr>
+            <tr><td>대표님이 링크를 쓰시는지</td><td>거래처에 명함처럼 보내시는지</td><td>오픈 후 한 달</td></tr>
+          </table></div>
+          <p>검색 순위와 문의 수는 약속드릴 수 없습니다. 대신 매달 솔직하게 보고드리고 맞춰 고쳐 나가겠습니다.</p>
+        </div>
+      </details>
+      <details>
+        <summary>경쟁 업체를 살펴본 결과</summary>
+        <div class="in">
+          <p>2026년 10월 21일, 국내 무진동·정밀장비 운송 업체 홈페이지 14곳을 보고, 잘 만든 3곳은 휴대폰·PC 화면을 직접 확인했습니다.</p>
+          <div class="tbl"><table>
+            <tr><th>다른 업체들</th><th>나라트랜스 홈페이지</th></tr>
+            <tr><td>"완벽한", "파손 제로", "1위" 같은 근거 없는 말</td><td>확인된 사실만, 보험은 "약관에 따름"처럼 정확하게</td></tr>
+            <tr><td>차량은 "몇 톤 몇 대"까지만</td><td>차급별 적재함 크기·리프트 표와 장비 길이 비교 눈금자</td></tr>
+            <tr><td>견적 문의는 빈 칸에 알아서 쓰는 방식</td><td>장비·크기·현장 조건을 고르면 문의 문자가 자동으로 완성</td></tr>
+            <tr><td>허가번호·사업자번호를 거의 안 적음</td><td>받는 대로 첫 화면 가까이에</td></tr>
+            <tr><td>떠 있는 버튼 여러 개가 글을 가림</td><td>휴대폰 아래 전화 바 하나만</td></tr>
+          </table></div>
+          <p>잘하는 업체들은 실제 작업 사례와 요금 범위를 공개합니다. 위 8번·9번을 받으면 따라잡을 수 있습니다.</p>
+        </div>
+      </details>
+      <details>
+        <summary>만드는 기준 (약속)</summary>
+        <div class="in"><ol>
+          <li>지어낸 내용은 넣지 않습니다. 대표님께 확인받은 것만 씁니다.</li>
+          <li>사진 출처를 밝힙니다. 참고 사진에는 "참고 이미지"라고 적고, 최종본은 실제 사진으로 바꿉니다.</li>
+          <li>어느 화면에서든 전화로 이어집니다.</li>
+          <li>휴대폰에서 첫 화면이 2.5초 안에 뜨게 합니다. 지금 시안은 측정 도구에서 1.9초입니다.</li>
+          <li>글자 크기·대비·버튼 크기를 웹 접근성 기준에 맞춥니다.</li>
+          <li>검색과 카카오톡 공유에 대비합니다. 검색 순위는 보장할 수 없습니다.</li>
+        </ol></div>
+      </details>
+      <details>
+        <summary>진행 순서</summary>
+        <div class="in"><ol>
+          <li>시안 확인: 휴대폰으로 보시고 고칠 곳을 알려 주세요. 캡처에 동그라미를 쳐서 보내셔도 됩니다.</li>
+          <li>정보·사진 받기: 위 칸을 채워 보내 주시면 시안의 주황색 점선 칸을 채웁니다.</li>
+          <li>수정: 말씀하신 곳은 같은 날 고칩니다.</li>
+          <li>공개: 승인하시면 누구나 볼 수 있게 올립니다. 못 받은 항목은 빼고 올립니다.</li>
+        </ol></div>
+      </details>
+      <details>
+        <summary>공개 후 관리</summary>
+        <div class="in"><ul>
+          <li>매주 사이트 상태와 빠진 정보를 점검합니다.</li>
+          <li>매달 문의 수와 검색 노출을 짧게 보고드립니다.</li>
+          <li>바뀐 정보는 알려 주신 날 고칩니다.</li>
+          <li>사진통으로 만든 현장카드를 홈페이지 작업 사례로 바로 올리는 방법을 준비하고 있습니다.</li>
+        </ul></div>
+      </details>
     </section>
   </div>
 </main>
-<footer>
-  <div class="wrap">나라트랜스 홈페이지 제작팀 · 2026-10-21</div>
-</footer>
+<footer><div class="wrap">나라트랜스 홈페이지 제작팀 · 2026-10-22</div></footer>
+<script>
+(function(){
+  var f=document.getElementById('f'), msg=document.getElementById('msg');
+  function build(){
+    var lines=['[나라트랜스 홈페이지 정보]'];
+    var seen={};
+    [].forEach.call(f.querySelectorAll('input,textarea'),function(el){
+      if(el.type==='radio'){ if(el.checked&&!seen[el.name]){seen[el.name]=1;lines.push(el.name+': '+el.value);} return; }
+      if(el.type==='checkbox'){ if(el.checked) lines.push(el.value); return; }
+      var v=(el.value||'').trim(); if(v) lines.push((el.dataset.k||el.id)+': '+v);
+    });
+    msg.textContent=lines.length>1?lines.join('\n'):'[나라트랜스 홈페이지 정보]\n(위 칸을 채우면 여기에 정리됩니다)';
+  }
+  f.addEventListener('input',build); f.addEventListener('change',build); f.addEventListener('submit',function(e){e.preventDefault()}); build();
+  document.getElementById('copy').addEventListener('click',function(){
+    var t=msg.textContent, out=document.getElementById('copied');
+    var sel=function(){try{var r=document.createRange();r.selectNodeContents(msg);var s=getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){out.textContent='복사했습니다. 카톡에 붙여 넣어 보내 주세요.'},function(){sel();out.textContent='위 내용을 길게 눌러 복사해 주세요.'});}
+    else{sel();out.textContent='위 내용을 길게 눌러 복사해 주세요.';}
+  });
+})();
+</script>
 </body>
 </html>
