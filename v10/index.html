@@ -98,12 +98,12 @@ body.review span.ph{display:inline!important}
 .sec{padding:120px 0 40px}
 .sec .row{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
 .sec .row p{color:var(--muted)}
-.rail{list-style:none;margin:40px 0 0;padding:0 20px 24px max(20px,calc((100vw - var(--w))/2 + 20px));display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,30%);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.rail{list-style:none;margin:40px 0 0;padding:0 20px 24px max(20px,calc((100vw - var(--w))/2 + 20px));display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,30%);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline-start:max(20px,calc((100vw - var(--w))/2 + 20px));-webkit-overflow-scrolling:touch;scrollbar-width:thin}
 @media (max-width:700px){.rail{grid-auto-columns:78%}}
 .rail li{scroll-snap-align:start}
 .rail figure{margin:0;position:relative;border-radius:24px;overflow:hidden}
 .rail img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.rail figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.6) 100%)}
+.rail figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,22,38,0) 55%,rgba(11,22,38,.72) 100%)}
 .rail .cap{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff}
 .rail h3{font-size:1.375rem;font-weight:800}
 .rail .cap p{font-size:.9375rem;color:#E8EDF3;margin-top:2px}
@@ -175,22 +175,22 @@ footer p+p{margin-top:4px}
   <div class="card">
     <p class="kick">리프트 · 안전난간대</p>
     <h2 id="lift-h">바퀴 달린 장비도<br>리프트로 그대로</h2>
-    <p class="d">무진동에 리프트를 갖춰도, 난간대가 없으면 사고로 이어질 수 있습니다. 리프트 위에서 장비가 밀리거나 넘어지지 않게, 사람이 떨어지지 않게 안전난간대를 씁니다. 지게차 없는 현장도 됩니다.<span class="ph"> 난간 높이·장착 차량 <span class="blank">확인 중</span></span></p>
-    <p class="law">참고: 산업안전보건기준에 관한 규칙 제43조 — 추락 위험 장소의 안전난간. <a href="https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제43조" target="_blank" rel="noopener">원문</a></p>
+    <p class="d">난간대가 없으면 사고로 이어질 수 있습니다. 장비가 밀리지 않게, 사람이 떨어지지 않게 막습니다.<span class="ph"> 난간 높이·장착 차량 <span class="blank">확인 중</span></span></p>
+    <p class="law">산업안전보건기준에 관한 규칙 제43조 <a href="https://www.law.go.kr/법령/산업안전보건기준에관한규칙/제43조" target="_blank" rel="noopener">원문</a></p>
   </div>
 </section>
 
 <section class="sec" id="what" aria-labelledby="what-h">
   <div class="wrap row"><div><p class="kick">정밀장비 · 고가장비 전문</p><h2 id="what-h">옮기는 것</h2></div><p class="hint">옆으로 넘겨 보세요 →</p></div>
   <ul class="rail">
-    <li><figure><img src="img/ref-v4-c-medbed.jpg" width="900" height="675" alt="바퀴 달린 병원 침대" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>의료장비</h3><p>바퀴 달린 의료기기, 바퀴에 실어 움직이는 의료장비</p></div></figure></li>
-    <li><figure><img src="img/ref-v4-c-semi.jpg" width="900" height="675" alt="정밀 생산 장비" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>반도체 장비 · CNC</h3><p>바퀴 달린 반도체 장비, CNC</p></div></figure></li>
-    <li><figure><img src="img/ref-v4-c-server.jpg" width="900" height="675" alt="서버 랙" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>서버 · 전산장비</h3><p>전산장비 이전</p></div></figure></li>
-    <li><figure><img src="img/v3-p-crate2.webp" alt="완충재로 감싼 장비" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>정밀 · 고가장비</h3><p>바퀴 달린 모든 장비</p></div></figure></li>
-    <li><figure><img src="img/ref-v4-c-supercar.jpg" width="900" height="675" alt="스포츠카" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>슈퍼카 탁송</h3><p>고가 차량</p></div></figure></li>
-    <li><figure><img src="img/ref-v4-c-moto.jpg" width="900" height="675" alt="여러 대의 오토바이" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>오토바이</h3><p>고가 오토바이, 여러 대</p></div></figure></li>
-    <li><figure><img src="img/ref-v4-c-piano.jpg" width="900" height="675" alt="그랜드피아노" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>그랜드피아노</h3><p>대형 피아노</p></div></figure></li>
-    <li><figure><img src="img/ref-v4-c-museum.jpg" width="900" height="675" alt="박물관 조각 작품" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>유물 · 문화재</h3><p>종교단체 그림, 조각 작품</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-medbed.jpg" width="720" height="900" alt="바퀴 달린 병원 침대" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>의료장비</h3><p>바퀴 달린 의료기기, 바퀴에 실어 움직이는 의료장비</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-semi.jpg" width="720" height="900" alt="정밀 생산 장비" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>반도체 장비 · CNC</h3><p>바퀴 달린 반도체 장비, CNC</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-server.jpg" width="720" height="900" alt="서버 랙" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>서버 · 전산장비</h3><p>전산장비 이전</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-crate.jpg" width="720" height="900" alt="완충재로 감싼 장비" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>정밀 · 고가장비</h3><p>바퀴 달린 모든 장비</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-supercar.jpg" width="720" height="900" alt="스포츠카" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>슈퍼카 탁송</h3><p>고가 차량</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-moto.jpg" width="720" height="900" alt="여러 대의 오토바이" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>오토바이</h3><p>고가 오토바이, 여러 대</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-piano.jpg" width="720" height="900" alt="그랜드피아노" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>그랜드피아노</h3><p>대형 피아노</p></div></figure></li>
+    <li><figure><img src="img/ref-v10-c-museum.jpg" width="720" height="900" alt="박물관 조각 작품" loading="lazy"><span class="ref">참고 이미지</span><div class="cap"><h3>유물 · 문화재</h3><p>종교단체 그림, 조각 작품</p></div></figure></li>
   </ul>
   <div class="wrap"><p class="ph" style="color:var(--muted)">유해화학물질 운반 <span class="blank">허가·교육 증빙 받는 중 — 받으면 추가</span></p></div>
 </section>
