@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ko"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8">
+<meta name="description" content="바퀴 달린 장비를 무진동 차량, 리프트, 안전난간대로 옮깁니다. 대표 직통 010-5256-2425">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="특수화물무진동24">
+<meta property="og:description" content="바퀴 달린 장비를 무진동 차량, 리프트, 안전난간대로 옮깁니다. 대표 직통 010-5256-2425">
+<meta property="og:image" content="https://ddggdd-dev.github.io/naratrans/v5a/img/ref-v4-hero-pc.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&amp;display=swap">
+<!-- v5a (2026-10-28 고성식 "다 해봐", 제안 A): 홈페이지 전체를 현장 안전 서류(상차 전 점검표)로. 주인공은 사진이 아니라 손님이 직접 채우는 점검표.
+     사실 출처: README 확인된 정보·새 방향 확인. 점검 결과는 "확인할 것"만 말하고 판정·보장하지 않는다(절대 규칙 6). -->
+<style>
+:root{--paper:#F6F4EE;--sheet:#FFFFFF;--ink:#16181B;--body:#3B3F45;--muted:#62676E;--rule:#16181B;--hair:#D8D5CC;--stamp:#C94A0C;--stamp-soft:rgba(201,74,12,.08);
+--f:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;--doc:"Nanum Myeongjo","AppleMyungjo",serif;--w:1160px;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f);font-size:1.0625rem;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+.tel{white-space:nowrap;font-variant-numeric:tabular-nums}
+.ref{position:absolute;right:8px;bottom:8px;font-size:.8125rem;line-height:1;padding:5px 7px;background:rgba(0,0,0,.6);color:#fff}
+.blank{background:rgba(240,128,40,.16);outline:1.5px dashed #E07A2C;outline-offset:-1px;padding:0 .35em}
+.ph{display:none!important}
+body.review .ph{display:block!important}
+body.review span.ph{display:inline!important}
+
+.top{border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;min-height:64px;gap:16px}
+.brand{text-decoration:none;display:flex;align-items:baseline;gap:10px;min-height:44px;align-items:center}
+.brand b{font-weight:800;font-size:1.125rem}
+.brand small{font-size:.8125rem;color:var(--muted)}
+.top a.call{font-weight:700;text-decoration:none;border:1.5px solid var(--ink);padding:8px 14px;min-height:44px;display:inline-flex;align-items:center}
+
+/* 첫 화면: 왼쪽 문구 / 오른쪽 점검표 서류 */
+.first{display:grid;gap:40px;padding:48px 0 72px}
+@media (min-width:980px){.first{grid-template-columns:5fr 7fr;gap:56px;padding:72px 0 96px;align-items:start}.lede{position:sticky;top:32px}}
+.docno{font-size:.8125rem;color:var(--muted);letter-spacing:.04em;border-top:1px solid var(--rule);padding-top:10px;display:flex;justify-content:space-between}
+.lede h1{font-family:var(--doc);font-weight:800;font-size:clamp(2rem,1.5rem + 2.2vw,3.25rem);margin-top:24px;line-height:1.22}
+.lede h1 u{text-decoration:none;box-shadow:inset 0 -.32em 0 rgba(201,74,12,.22)}
+.lede p.l{margin-top:18px;color:var(--body)}
+.lede .callrow{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 22px;font:inherit;font-weight:700;text-decoration:none;border:2px solid var(--ink);cursor:pointer}
+.btn-call{background:var(--ink);color:#fff}
+.btn-call:hover{background:#000}
+.btn-ghost{background:transparent;color:var(--ink)}
+.facts-1{margin-top:24px;font-size:.9375rem;font-weight:700;color:var(--muted)}
+.facts{margin-top:32px;border-top:1px solid var(--rule)}
+.facts div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--hair);font-size:.9375rem}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;font-weight:700;text-align:right}
+
+.sheet{background:var(--sheet);border:1.5px solid var(--rule);box-shadow:0 1px 0 var(--hair),0 18px 40px -24px rgba(0,0,0,.35)}
+.sheet-h{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:20px 22px 14px;border-bottom:3px double var(--rule)}
+.sheet-h h2{font-family:var(--doc);font-size:1.5rem;font-weight:800}
+.sheet-h small{font-size:.8125rem;color:var(--muted);text-align:right}
+.row{display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--hair)}
+.row>.k{padding:14px 12px 14px 22px;font-size:.875rem;font-weight:700;color:var(--muted);border-right:1px solid var(--hair);background:#FBFAF7}
+.row>.v{padding:10px 14px}
+@media (max-width:520px){.row{grid-template-columns:1fr}.row>.k{border-right:0;border-bottom:1px dashed var(--hair);padding:10px 16px 6px}.row>.v{padding:8px 12px 12px}}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{position:relative}
+.opts input{position:absolute;opacity:0;inset:0}
+.opts span{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 12px 6px 10px;border:1px solid var(--hair);font-size:.9375rem;cursor:pointer;background:#fff}
+.opts span::before{content:"";width:16px;height:16px;border:1.5px solid var(--ink);flex:none}
+.opts input:checked+span{border-color:var(--ink)}
+.opts input:checked+span::before{background:var(--ink);box-shadow:inset 0 0 0 3px #fff}
+.opts input:focus-visible+span{outline:3px solid var(--stamp);outline-offset:1px}
+.v input[type=text]{width:100%;min-height:44px;border:0;border-bottom:1px solid var(--ink);font:inherit;font-size:1rem;padding:6px 2px;background:transparent}
+.v input[type=text]:focus{outline:none;border-bottom-width:2px}
+
+.result{position:relative;padding:20px 22px 22px;border-top:3px double var(--rule);background:#FDFCF9}
+.result h3{font-family:var(--doc);font-size:1.1875rem;font-weight:800}
+.checks{list-style:none;margin:12px 0 0;padding:0}
+.checks li{position:relative;padding:8px 0 8px 26px;border-bottom:1px dashed var(--hair);font-size:.9375rem;color:var(--body)}
+.checks li::before{content:"→";position:absolute;left:2px;top:8px;color:var(--stamp);font-weight:800}
+.checks li b{color:var(--ink)}
+.checks .empty{color:var(--muted)}
+.checks .empty::before{content:"·"}
+.stamp{position:absolute;right:18px;top:-30px;width:104px;height:104px;border:3px solid var(--stamp);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--stamp);font-weight:800;font-size:.8125rem;line-height:1.25;transform:rotate(-12deg);background:rgba(255,255,255,.7);opacity:.18;transition:opacity .3s}
+.stamp.on{opacity:.95}
+.stamp i{display:block;font-style:normal;font-size:1rem;letter-spacing:-.02em}
+.result .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.result .acts .btn{min-height:48px}
+.result small{display:block;margin-top:10px;font-size:.8125rem;color:var(--muted)}
+
+/* 아래: 서류의 다음 장들 */
+.page{padding:80px 0;border-top:1px solid var(--rule)}
+.page-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:3px double var(--rule);padding-bottom:12px}
+.page-h h2{font-family:var(--doc);font-size:clamp(1.5rem,1.2rem + 1.2vw,2.125rem);font-weight:800}
+.page-h span{font-size:.8125rem;color:var(--muted);white-space:nowrap}
+.items{list-style:none;margin:0;padding:0}
+.items li{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:22px 0;border-bottom:1px solid var(--hair)}
+@media (min-width:860px){.items li{grid-template-columns:72px 260px 1fr}}
+.items .n{font-family:var(--doc);font-weight:800;font-size:1.25rem;color:var(--stamp)}
+.items h3{font-size:1.125rem}
+.items p{color:var(--body);font-size:.9688rem}
+@media (max-width:859px){.items p{grid-column:2}}
+.fact{margin-top:28px;display:grid;gap:16px;align-items:center;padding:20px;border:1.5px solid var(--ink);background:var(--sheet)}
+@media (min-width:860px){.fact{grid-template-columns:auto 1fr}}
+.fact b{font-family:var(--doc);font-size:2rem;font-weight:800;white-space:nowrap}
+.fact p{font-size:.9375rem;color:var(--body)}
+.fact a{color:var(--muted);font-size:.8125rem;display:inline-block;padding:10px 0}
+
+.cargo{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.cargo figure{margin:0;position:relative;border:1px solid var(--rule);background:var(--sheet)}
+.cargo img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(.25) contrast(1.02)}
+.cargo figcaption{padding:10px 12px;font-weight:700;font-size:.9688rem;border-top:1px solid var(--rule)}
+.cargo figcaption small{display:block;font-weight:500;color:var(--muted);font-size:.8125rem}
+
+.fleet{width:100%;border-collapse:collapse;margin-top:8px;font-size:.9688rem;background:var(--sheet)}
+.fleet th,.fleet td{border:1px solid var(--hair);padding:12px 14px;text-align:left}
+.fleet thead th{background:#FBFAF7;font-size:.8125rem;color:var(--muted)}
+.fleet tbody th{font-weight:800;white-space:nowrap}
+
+.sign{padding:88px 0 120px;border-top:1px solid var(--rule)}
+.sign-box{display:grid;gap:28px;border:1.5px solid var(--ink);background:var(--sheet);padding:28px}
+@media (min-width:860px){.sign-box{grid-template-columns:1fr auto;align-items:end;padding:40px}}
+.sign-box h2{font-family:var(--doc);font-size:clamp(1.5rem,1.2rem + 1.2vw,2.25rem);font-weight:800}
+.sign-box p{color:var(--body);margin-top:10px}
+.big-tel{display:inline-block;font-size:clamp(2rem,1.4rem + 2.8vw,3.25rem);font-weight:800;text-decoration:none;padding:4px 0;line-height:1.1}
+.who{font-size:.9375rem;color:var(--muted)}
+.signline{border-top:1px solid var(--ink);padding-top:8px;margin-top:20px;font-size:.875rem;color:var(--muted);min-width:260px}
+.signline b{font-family:var(--doc);font-size:1.25rem;color:var(--ink);margin-left:6px}
+footer{font-size:.8125rem;color:var(--muted);padding:24px 0 110px;border-top:1px solid var(--rule)}
+footer p+p{margin-top:4px}
+.review-t{margin-top:12px;min-height:44px;padding:0 12px;font:inherit;font-size:.8125rem;background:none;border:1px solid var(--hair);color:var(--muted);cursor:pointer}
+@media (min-width:1080px){footer{padding-bottom:32px}}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(22,24,27,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .25s}
+.callbar.show{transform:none}
+.callbar a{display:flex;justify-content:space-between;align-items:center;min-height:52px;max-width:var(--w);margin:0 auto;color:#fff;text-decoration:none;font-size:.9375rem}
+.callbar b{font-size:1.25rem;color:#FF9A5C}
+@media (min-width:1080px){.callbar{display:none}}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>특수화물무진동24</title></head><body><header class="top"><div class="wrap">
+  <a class="brand" href="#top"><b>특수화물무진동24</b><small>나라트랜스</small></a>
+  <a class="call" href="tel:010-5256-2425">전화 상담</a>
+</div></header>
+
+<main id="top">
+<div class="wrap first">
+  <div class="lede">
+    <p class="docno"><span>바퀴 달린 장비 운송</span><span>무진동 · 리프트 · 안전난간대</span></p>
+    <h1>맡기기 전에,<br><u>안전 점검표</u>부터<br>채워 보세요</h1>
+    <p class="l">장비 무게, 바퀴, 높이, 현장 조건을 체크하면 운송 전에 확인할 것이 정리됩니다. 그대로 대표에게 보내 상담하세요.</p>
+    <div class="callrow">
+      <a class="btn btn-call" href="tel:010-5256-2425" id="heroCall">전화 상담&nbsp;<span class="tel">010-5256-2425</span></a>
+    </div>
+    <p class="facts-1">무진동 · 리프트 · 안전난간대 · 보험 10억 원 · 전국</p>
+  </div>
+
+  <form class="sheet" id="sheet" onsubmit="return false" aria-labelledby="sheet-h">
+    <div class="sheet-h"><h2 id="sheet-h">상차 전 안전 점검표</h2><small>작성일 <span id="today"></span><br>특수화물무진동24</small></div>
+    <div class="row"><div class="k">장비</div><div class="v"><div class="opts">
+      <label><input type="radio" name="what" value="의료장비"><span>의료장비</span></label>
+      <label><input type="radio" name="what" value="반도체·CNC 장비"><span>반도체·CNC</span></label>
+      <label><input type="radio" name="what" value="서버·전산장비"><span>서버·전산</span></label>
+      <label><input type="radio" name="what" value="그랜드피아노"><span>피아노</span></label>
+      <label><input type="radio" name="what" value="슈퍼카·오토바이"><span>슈퍼카·오토바이</span></label>
+      <label><input type="radio" name="what" value="유물·미술품"><span>유물·미술품</span></label>
+      <label><input type="radio" name="what" value="기타 장비"><span>기타</span></label>
+    </div></div></div>
+    <div class="row"><div class="k">바퀴</div><div class="v"><div class="opts">
+      <label><input type="radio" name="wheel" value="있음"><span>있음</span></label>
+      <label><input type="radio" name="wheel" value="없음"><span>없음</span></label>
+      <label><input type="radio" name="wheel" value="모름"><span>모름</span></label>
+    </div></div></div>
+    <div class="row"><div class="k">높이·무게중심</div><div class="v"><div class="opts">
+      <label><input type="radio" name="tall" value="높음"><span>키가 크거나 위가 무거움</span></label>
+      <label><input type="radio" name="tall" value="낮음"><span>낮고 안정적</span></label>
+    </div></div></div>
+    <div class="row"><div class="k">현장</div><div class="v"><div class="opts">
+      <label><input type="checkbox" name="site" value="nofork"><span>지게차 없음</span></label>
+      <label><input type="checkbox" name="site" value="stairs"><span>계단·문턱</span></label>
+      <label><input type="checkbox" name="site" value="elev"><span>화물 엘리베이터</span></label>
+      <label><input type="checkbox" name="site" value="climate"><span>온습도 유지</span></label>
+      <label><input type="checkbox" name="site" value="install"><span>설치까지</span></label>
+    </div></div></div>
+    <div class="row"><div class="k"><label for="size">크기·무게</label></div><div class="v"><input type="text" id="size" placeholder="예: 80×120×190cm, 약 400kg"></div></div>
+    <div class="row"><div class="k"><label for="route">구간·일정</label></div><div class="v"><input type="text" id="route" placeholder="예: 성남 → 대전, 다음 주 화요일"></div></div>
+
+    <div class="result" aria-live="polite">
+      <div class="stamp" id="stamp"><span>특수화물<i>무진동24</i>상담 준비</span></div>
+      <h3>운송 전에 확인할 것</h3>
+      <ul class="checks" id="checks"></ul>
+      <div class="acts">
+        <a class="btn btn-ghost" id="sms" href="sms:010-5256-2425">점검표 문자로 보내기</a>
+        <button class="btn btn-ghost" type="button" id="copy">내용 복사</button>
+      </div>
+      <small>이 점검표는 상담 준비용입니다. 차량과 방법은 대표와 통화하며 정합니다. 문자 앱이 안 열리면 복사해 <span class="tel">010-5256-2425</span>로 보내 주세요.</small>
+    </div>
+  </form>
+</div>
+
+<section class="page" aria-labelledby="p2"><div class="wrap">
+  <div class="page-h"><h2 id="p2">우리가 챙기는 안전</h2><span>2쪽</span></div>
+  <ol class="items">
+    <li><span class="n">01</span><h3>리프트 안전난간대</h3><p>무진동 차량에 리프트가 있어도 난간이 없으면 바퀴 달린 장비가 리프트 끝으로 밀릴 위험이 남습니다. 난간대 달린 차량으로 싣고 내릴 수 있습니다.<span class="ph"> 난간 높이·장착 차량 <span class="blank">확인 중</span></span></p></li>
+    <li><span class="n">02</span><h3>전 차종 무진동 · 리프트</h3><p>1.4톤부터 11톤까지 에어서스펜션과 리프트를 갖췄습니다. 5톤 특수무진동 차량은 적재함 6.5 m, 리프트 2.1 m입니다.<span class="ph"> 리프트 허용하중 <span class="blank">확인 중</span></span></p></li>
+    <li><span class="n">03</span><h3>포장 · 상하차 · 현장 반입</h3><p>포장부터 상하차, 현장 안 반입까지 함께 합니다. 온도·습도 제어와 기록도 됩니다.</p></li>
+    <li><span class="n">04</span><h3>적재물배상책임보험 10억 원</h3><p>운송 중 화물 사고에 대비해 가입했습니다. 보상은 약관에 따릅니다.<span class="ph"> 1건당 한도 <span class="blank">확인 중</span></span></p></li>
+  </ol>
+  <div class="fact"><b>91 / 127</b><p>2017~2021년 화물자동차 관련 산재 사망사고 127건 중 91건(71.7%)이 사업장 안에서 짐을 싣고 내리다 났습니다. 운행 중 교통사고는 24건이었습니다.<br><a href="https://eiec.kdi.re.kr/policy/materialView.do?num=231938" target="_blank" rel="noopener">출처: 고용노동부 보도자료 2022-11-09 (KDI 게재본)</a></p></div>
+</div></section>
+
+<section class="page" aria-labelledby="p3"><div class="wrap">
+  <div class="page-h"><h2 id="p3">옮기는 장비</h2><span>3쪽</span></div>
+  <ul class="cargo">
+    <li><figure><img src="img/ref-v4-c-medbed.jpg" width="900" height="675" alt="바퀴 달린 병원 침대" loading="lazy"><span class="ref">참고 이미지</span><figcaption>바퀴 달린 의료장비<small>병원 침대 · 이동식 의료기기</small></figcaption></figure></li>
+    <li><figure><img src="img/ref-v4-c-semi.jpg" width="900" height="675" alt="정밀 생산 장비" loading="lazy"><span class="ref">참고 이미지</span><figcaption>반도체 장비 · CNC<small>정밀 · 고가 장비</small></figcaption></figure></li>
+    <li><figure><img src="img/ref-v4-c-server.jpg" width="900" height="675" alt="서버 랙 통로" loading="lazy"><span class="ref">참고 이미지</span><figcaption>서버 · 전산장비<small>서버실 이전</small></figcaption></figure></li>
+    <li><figure><img src="img/ref-v4-c-piano.jpg" width="900" height="675" alt="그랜드피아노" loading="lazy"><span class="ref">참고 이미지</span><figcaption>그랜드피아노<small>무거운 대형 악기</small></figcaption></figure></li>
+    <li><figure><img src="img/ref-v4-c-supercar.jpg" width="900" height="675" alt="스포츠카" loading="lazy"><span class="ref">참고 이미지</span><figcaption>슈퍼카 · 오토바이<small>고가 차량 탁송</small></figcaption></figure></li>
+    <li><figure><img src="img/ref-v4-c-museum.jpg" width="900" height="675" alt="박물관 조각 작품" loading="lazy"><span class="ref">참고 이미지</span><figcaption>유물 · 문화재 · 미술품<small>종교단체 그림 · 조각</small></figcaption></figure></li>
+  </ul>
+</div></section>
+
+<section class="page" aria-labelledby="p4"><div class="wrap">
+  <div class="page-h"><h2 id="p4">차량</h2><span>4쪽</span></div>
+  <table class="fleet">
+    <thead><tr><th scope="col">차급</th><th scope="col">갖춘 것</th><th scope="col">적재함 · 리프트</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">1.4톤</th><td>무진동 · 리프트</td><td data-ph-scope=""><span class="ph"><span class="blank">확인 중</span></span></td></tr>
+      <tr><th scope="row">3.5톤</th><td>무진동 · 리프트</td><td data-ph-scope=""><span class="ph"><span class="blank">확인 중</span></span></td></tr>
+      <tr><th scope="row">5톤</th><td>특수무진동 · 리프트</td><td>적재함 6.5 m · 리프트 2.1 m</td></tr>
+      <tr><th scope="row">11톤</th><td>무진동 · 리프트</td><td data-ph-scope=""><span class="ph"><span class="blank">확인 중</span></span></td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section class="sign" aria-labelledby="p5"><div class="wrap">
+  <div class="sign-box">
+    <div>
+      <h2 id="p5">점검표를 받는 사람은 대표입니다</h2>
+      <p>대표 직통 번호로 바로 상담하세요.</p>
+      <p class="who">대표 김준수 · <a href="mailto:kjs242424@gmail.com">kjs242424@gmail.com</a><span class="ph"> · 사업자등록번호 <span class="blank">받는 중</span> · 화물운송 허가 <span class="blank">확인 중</span></span></p>
+    </div>
+    <div>
+      <a class="big-tel" href="tel:010-5256-2425">010-5256-2425</a>
+      <p class="signline">정성을 다합니다.<b>김준수</b></p>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>특수화물무진동24 (나라트랜스) · 대표 김준수 · <span class="tel">010-5256-2425</span></p>
+  <p>사진은 무료 참고 이미지(Unsplash)이며 실제 보유 차량·작업 사진이 아닙니다. 마지막 업데이트 2026-10-28.</p>
+  <button type="button" class="review-t draft-only" id="review" aria-pressed="false">사장님 확인용 보기: 받아야 할 정보 자리 표시</button>
+</div></footer>
+
+<div class="callbar" id="callbar"><a href="tel:010-5256-2425" tabindex="-1"><span>대표 직통 전화 상담</span><b>010-5256-2425</b></a></div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var rv=$('review');function setR(on){document.body.classList.toggle('review',on);rv&&rv.setAttribute('aria-pressed',on?'true':'false')}
+  rv&&rv.addEventListener('click',function(){setR(!document.body.classList.contains('review'))});if(/[?&]review\b/.test(location.search))setR(true);
+  var d=new Date();$('today').textContent=d.getFullYear()+'. '+(d.getMonth()+1)+'. '+d.getDate()+'.';
+  var f=$('sheet'),ul=$('checks'),st=$('stamp'),sms=$('sms'),cp=$('copy');
+  function v(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function vs(n){return Array.prototype.map.call(f.querySelectorAll('input[name="'+n+'"]:checked'),function(e){return e.value})}
+  var SITE={nofork:'지게차 없음',stairs:'계단·문턱 있음',elev:'화물 엘리베이터 있음',climate:'온습도 유지 필요',install:'설치까지 필요'};
+  function build(){
+    var w=v('what'),wh=v('wheel'),t=v('tall'),s=vs('site'),z=$('size').value.trim(),r=$('route').value.trim(),C=[];
+    if(wh==='있음'&&t==='높음')C.push('<b>바퀴 + 키 큰 장비</b> — 리프트 위에서 밀리거나 넘어질 수 있어 <b>난간대 차량</b>으로 상담');
+    else if(wh==='있음')C.push('<b>바퀴 장비</b> — 리프트 위에서 밀리지 않게 <b>난간대 차량</b>으로 상담');
+    else if(t==='높음')C.push('<b>키가 크거나 위가 무거움</b> — 고정 방법과 상하차 순서 확인');
+    if(wh==='모름')C.push('<b>바퀴 여부</b> — 장비 사진을 함께 보내 주시면 확인');
+    if(s.indexOf('nofork')>-1)C.push('<b>지게차 없음</b> — 장비 무게가 리프트로 되는지 확인');
+    if(s.indexOf('stairs')>-1)C.push('<b>계단·문턱</b> — 반입 경로와 필요한 인원 확인');
+    if(s.indexOf('elev')>-1)C.push('<b>화물 엘리베이터</b> — 엘리베이터 크기·하중 확인');
+    if(s.indexOf('climate')>-1)C.push('<b>온습도 유지</b> — 항온항습 차량, 기록 방식 확인');
+    if(s.indexOf('install')>-1)C.push('<b>설치까지</b> — 설치 범위를 상담 때 확인');
+    if(!z)C.push('<b>크기·무게</b> — 아는 만큼 적거나 통화로 알려 주세요');
+    var any=w||wh||t||s.length||z||r;
+    ul.innerHTML=any?C.map(function(c){return '<li>'+c+'</li>'}).join(''):'<li class="empty">위 칸을 체크하면 여기에 정리됩니다.</li>';
+    st.classList.toggle('on',!!(w&&wh));
+    var L=['[상차 전 안전 점검표 · 특수화물무진동24]','- 장비: '+(w||'-'),'- 바퀴: '+(wh||'-'),'- 높이·무게중심: '+(t==='높음'?'키가 크거나 위가 무거움':t==='낮음'?'낮고 안정적':'-'),'- 현장: '+(s.length?s.map(function(k){return SITE[k]}).join(', '):'-'),'- 크기·무게: '+(z||'통화로 알려 드림'),'- 구간·일정: '+(r||'통화로 알려 드림')];
+    var plain=C.map(function(c){return '  · '+c.replace(/<[^>]+>/g,'')});if(plain.length)L.push('- 확인할 것:\n'+plain.join('\n'));
+    var text=L.join('\n');sms.href='sms:010-5256-2425?body='+encodeURIComponent(text);return any?text:'';
+  }
+  f.addEventListener('change',build);f.addEventListener('input',build);build();
+  cp.addEventListener('click',function(){var t=build();if(!t){ul.innerHTML='<li class="empty">먼저 장비부터 체크해 주세요.</li>';return}
+    var ok=function(){cp.textContent='복사했어요';setTimeout(function(){cp.textContent='내용 복사'},1800)};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,ok);else ok()});
+  var bar=$('callbar'),hc=$('heroCall');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){var vis=es[0].isIntersecting;bar.classList.toggle('show',!vis);bar.querySelector('a').tabIndex=vis?-1:0}).observe(hc)}else bar.classList.add('show');
+})();
+</script>
+</body></html>

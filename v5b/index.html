@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8">
+<meta name="description" content="바퀴 달린 장비를 무진동 차량, 리프트, 안전난간대로 옮깁니다. 대표 직통 010-5256-2425">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="특수화물무진동24">
+<meta property="og:description" content="바퀴 달린 장비를 무진동 차량, 리프트, 안전난간대로 옮깁니다. 대표 직통 010-5256-2425">
+<meta property="og:image" content="https://ddggdd-dev.github.io/naratrans/v5b/img/ref-v4-hero-pc.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<!-- v5b (2026-10-28 고성식 "다 해봐", 제안 B): 스크롤하면 상차 순서가 한 단계씩 넘어가는 이야기. 차를 그리지 않고(CLAUDE.md) 사진 + 리프트 높이 눈금만 움직인다.
+     지금 사진은 모두 참고 이미지 — 사장님 실제 상차 사진 5장(오르기·난간 세우기·올리기·고정·출발)을 받으면 그대로 바꾼다. -->
+<style>
+:root{--bg:#0B0F13;--bg2:#121820;--ink:#F3F5F7;--soft:#AEB8C2;--muted:#8792A0;--line:rgba(255,255,255,.12);--hot:#FF7A2E;--hot-d:#C2520E;
+--f:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;--w:1200px;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:1.0625rem;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.2;letter-spacing:-.025em}
+p{margin:0}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+.tel{white-space:nowrap;font-variant-numeric:tabular-nums}
+.ref{position:absolute;right:10px;bottom:10px;z-index:3;font-size:.8125rem;line-height:1;padding:6px 8px;background:rgba(0,0,0,.6);color:#fff}
+.blank{background:rgba(240,128,40,.2);outline:1.5px dashed #F08A3C;outline-offset:-1px;padding:0 .35em}
+.ph{display:none!important}
+body.review .ph{display:block!important}
+body.review span.ph{display:inline!important}
+
+.top{position:absolute;inset:0 0 auto;z-index:10}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;min-height:72px}
+.brand{text-decoration:none;display:flex;flex-direction:column;justify-content:center;min-height:48px;line-height:1.15}
+.brand b{font-size:1.125rem;font-weight:800}
+.brand small{font-size:.8125rem;color:var(--soft)}
+.top .call{text-decoration:none;font-weight:700;border:1.5px solid rgba(255,255,255,.5);padding:8px 14px;min-height:44px;display:inline-flex;align-items:center}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 70%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,15,19,.7) 0%,rgba(11,15,19,.45) 30%,rgba(11,15,19,.94) 70%,#0B0F13 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:72px;width:100%}
+.hero .k{font-size:.9375rem;font-weight:700;color:var(--hot)}
+.hero h1{font-size:clamp(2.25rem,1.4rem + 3vw,4rem);font-weight:800;margin-top:10px}
+.hero p.l{margin-top:16px;max-width:30em;color:#D5DCE3}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 22px;font:inherit;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--hot-d);color:#fff}
+.btn-call:hover{background:#A9450B}
+.btn-line{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.down{display:inline-block;margin-top:40px;font-size:.875rem;color:var(--soft);text-decoration:none;padding:10px 0}
+
+/* 이야기: 왼쪽 고정 사진 + 오른쪽 단계 */
+.story{position:relative;padding:40px 0 80px}
+.stage{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.frame{position:relative;width:100%;aspect-ratio:4/5;max-height:86svh;overflow:hidden;background:#000}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.frame img.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.frame img{transition:none}}
+.gauge{position:absolute;left:16px;top:16px;bottom:16px;width:44px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px}
+.gauge .bar{flex:1;width:6px;background:rgba(255,255,255,.18);position:relative}
+.gauge .fill{position:absolute;left:0;right:0;bottom:0;height:0;background:var(--hot);transition:height .6s ease}
+.gauge span{font-size:.8125rem;color:#fff;writing-mode:vertical-rl;letter-spacing:.08em;background:rgba(0,0,0,.45);padding:6px 3px}
+.count{position:absolute;right:16px;top:16px;z-index:3;font-weight:800;font-size:1rem;background:rgba(0,0,0,.55);padding:6px 10px;font-variant-numeric:tabular-nums}
+.grid{display:grid;gap:0}
+@media (min-width:960px){.grid{grid-template-columns:6fr 5fr;gap:64px}}
+@media (max-width:959px){.stage{position:sticky;top:0;height:auto;padding-top:8px;z-index:2;background:var(--bg)}.frame{aspect-ratio:16/11;max-height:46svh}}
+.step{min-height:90svh;display:flex;flex-direction:column;justify-content:center;padding:40px 0;opacity:.35;transition:opacity .4s}
+.step.on{opacity:1}
+@media (max-width:959px){.step{min-height:70svh}}
+.step .no{font-size:.875rem;font-weight:800;color:var(--hot)}
+.step h2{font-size:clamp(1.75rem,1.3rem + 1.8vw,2.75rem);font-weight:800;margin-top:8px}
+.step p{margin-top:14px;color:var(--soft);max-width:28em}
+.step .risk{margin-top:18px;padding:12px 14px;border-left:3px solid var(--hot);background:rgba(255,122,46,.08);color:#FFD8C2;font-size:.9375rem}
+
+.fact{padding:96px 0;border-top:1px solid var(--line);background:var(--bg2)}
+.fact .big{font-size:clamp(3rem,2rem + 5vw,6rem);font-weight:800;line-height:1;color:var(--hot);font-variant-numeric:tabular-nums}
+.fact .big small{font-size:.35em;color:var(--soft);font-weight:700;margin-left:10px}
+.fact p{margin-top:18px;max-width:36em;color:#D5DCE3}
+.fact a{display:inline-block;margin-top:8px;padding:10px 0;font-size:.8125rem;color:var(--muted)}
+
+.what{padding:96px 0}
+.what h2{font-size:clamp(1.625rem,1.2rem + 1.6vw,2.5rem);font-weight:800}
+.tiles{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:2px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:860px){.tiles{grid-template-columns:repeat(3,1fr)}}
+.tiles li{position:relative;overflow:hidden}
+.tiles img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:brightness(.72)}
+.tiles b{position:absolute;left:14px;bottom:12px;z-index:2;font-size:1.0625rem}
+.tiles .ref{top:10px;bottom:auto}
+.spec{margin-top:40px;display:grid;gap:0;border-top:1px solid var(--line)}
+@media (min-width:860px){.spec{grid-template-columns:repeat(4,1fr)}}
+.spec div{padding:18px 0;border-bottom:1px solid var(--line)}
+@media (min-width:860px){.spec div{padding:20px 20px 20px 0}}
+.spec b{display:block;font-size:1.125rem}
+.spec span{font-size:.9375rem;color:var(--soft)}
+
+.contact{padding:110px 0 120px;border-top:3px solid var(--hot);background:var(--bg2)}
+.contact h2{font-size:clamp(1.75rem,1.3rem + 1.8vw,2.75rem);font-weight:800}
+.big-tel{display:inline-block;margin:20px 0 6px;padding:4px 0;font-size:clamp(2.25rem,1.4rem + 3.6vw,4rem);font-weight:800;text-decoration:none;line-height:1.1}
+.contact .who{color:var(--soft);font-size:.9375rem}
+.contact .who a{color:var(--ink)}
+.contact .slogan{margin-top:28px;font-weight:700}
+footer{font-size:.8125rem;color:var(--muted);padding:24px 0 110px;border-top:1px solid var(--line)}
+footer p+p{margin-top:4px}
+.review-t{margin-top:12px;min-height:44px;padding:0 12px;font:inherit;font-size:.8125rem;background:none;border:1px solid var(--line);color:var(--soft);cursor:pointer}
+@media (min-width:1080px){footer{padding-bottom:32px}}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(8,11,14,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .25s}
+.callbar.show{transform:none}
+.callbar a{display:flex;justify-content:space-between;align-items:center;min-height:52px;max-width:var(--w);margin:0 auto;color:#fff;text-decoration:none;font-size:.9375rem}
+.callbar b{font-size:1.25rem;color:#FF9A5C}
+@media (min-width:1080px){.callbar{display:none}}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>특수화물무진동24</title></head><body><header class="top"><div class="wrap">
+  <a class="brand" href="#top"><b>특수화물무진동24</b><small>나라트랜스</small></a>
+  <a class="call" href="tel:010-5256-2425">전화 상담</a>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <img src="img/ref-v5-liftgate.jpg" width="1000" height="1250" alt="화물차 뒤에 내려진 리프트" fetchpriority="high">
+  <span class="ref">참고 이미지</span>
+  <div class="wrap">
+    <p class="k">바퀴 달린 장비 · 무진동 · 리프트 · 안전난간대</p>
+    <h1 id="h1">리프트 위,<br>가장 위험한 순간</h1>
+    <p class="l">바퀴 달린 장비는 리프트 위에서 밀리고 넘어지기 쉽습니다. 그 순간을 이렇게 지킵니다.</p>
+    <div class="cta">
+      <a class="btn btn-call" id="heroCall" href="tel:010-5256-2425">전화 상담&nbsp;<span class="tel">010-5256-2425</span></a>
+    </div>
+    <a class="down" href="#story">↓ 싣는 순서 보기</a>
+  </div>
+</section>
+
+<section class="story" id="story" aria-label="상차 순서"><div class="wrap grid">
+  <div class="stage"><div class="frame" id="frame">
+    <img class="on" src="img/ref-v5-liftgate.jpg" width="1000" height="1250" alt="리프트가 내려진 화물차" loading="lazy">
+    <img src="img/ref-v5-liftload.jpg" width="854" height="1067" alt="화물차 뒤 리프트 판" loading="lazy">
+    <img src="img/v3-p-lift.webp" alt="화물차 리프트 판 가까이" loading="lazy">
+    <img src="img/v3-p-crate2.webp" alt="완충재로 감싼 장비" loading="lazy">
+    <img src="img/ref-v5-road.jpg" width="1000" height="1250" alt="밤길을 달리는 화물차" loading="lazy">
+    <div class="gauge" aria-hidden="true"><div class="bar"><div class="fill" id="fill"></div></div><span>리프트 높이</span></div>
+    <div class="count" id="count">1 / 5</div>
+    <span class="ref" id="cap">참고 이미지</span>
+  </div></div>
+  <div>
+    <article class="step on" data-i="0" data-h="0"><span class="no">01 · 오르기</span><h2>바퀴 장비가 리프트에 오릅니다</h2><p>의료장비, 반도체 장비, 서버랙, 피아노처럼 바퀴가 달린 장비를 리프트 판 위로 옮깁니다.</p><p class="risk">바퀴가 굴러 리프트 끝으로 밀릴 수 있는 순간입니다.</p></article>
+    <article class="step" data-i="1" data-h="0"><span class="no">02 · 난간 세우기</span><h2>난간대를 세웁니다</h2><p>난간대 달린 차량은 리프트 가장자리를 막고 올립니다. 무진동 차량에 리프트가 있어도 난간이 없으면 위험이 남습니다.<span class="ph"> 난간 높이·장착 차량 <span class="blank">확인 중</span></span></p></article>
+    <article class="step" data-i="2" data-h="100"><span class="no">03 · 올리기</span><h2>리프트로 들어 올립니다</h2><p>지게차 없이 리프트로 적재함 높이까지 올립니다. 장비 무게가 리프트로 되는지 먼저 확인합니다.<span class="ph"> 리프트 허용하중 <span class="blank">확인 중</span></span></p><p class="risk">키가 크거나 위가 무거운 장비는 이때 넘어지기 쉽습니다.</p></article>
+    <article class="step" data-i="3" data-h="100"><span class="no">04 · 고정</span><h2>적재함 안에서 포장하고 고정합니다</h2><p>포장과 상하차, 현장 반입까지 함께 합니다.</p></article>
+    <article class="step" data-i="4" data-h="100"><span class="no">05 · 출발</span><h2>무진동으로 달립니다</h2><p>1.4톤부터 11톤까지 전 차종 에어서스펜션. 온도·습도 제어와 기록도 됩니다. 전국 운송합니다.</p></article>
+  </div>
+</div></section>
+
+<section class="fact" aria-label="근거"><div class="wrap">
+  <p class="big">71.7%<small>91 / 127건</small></p>
+  <p>2017~2021년 화물자동차 관련 산재 사망사고 가운데 사업장 안에서 짐을 싣고 내리다 난 사고의 비율입니다. 운행 중 교통사고는 24건이었습니다.</p>
+  <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=231938" target="_blank" rel="noopener">출처: 고용노동부 보도자료 2022-11-09 (KDI 게재본)</a>
+</div></section>
+
+<section class="what" aria-labelledby="what-h"><div class="wrap">
+  <h2 id="what-h">이런 장비를 옮깁니다</h2>
+  <ul class="tiles">
+    <li><img src="img/ref-v4-c-medbed.jpg" width="900" height="675" alt="바퀴 달린 병원 침대" loading="lazy"><span class="ref">참고 이미지</span><b>바퀴 달린 의료장비</b></li>
+    <li><img src="img/ref-v4-c-semi.jpg" width="900" height="675" alt="정밀 생산 장비" loading="lazy"><span class="ref">참고 이미지</span><b>반도체 장비 · CNC</b></li>
+    <li><img src="img/ref-v4-c-server.jpg" width="900" height="675" alt="서버 랙" loading="lazy"><span class="ref">참고 이미지</span><b>서버 · 전산장비</b></li>
+    <li><img src="img/ref-v4-c-piano.jpg" width="900" height="675" alt="그랜드피아노" loading="lazy"><span class="ref">참고 이미지</span><b>그랜드피아노</b></li>
+    <li><img src="img/ref-v4-c-supercar.jpg" width="900" height="675" alt="스포츠카" loading="lazy"><span class="ref">참고 이미지</span><b>슈퍼카 · 오토바이</b></li>
+    <li><img src="img/ref-v4-c-museum.jpg" width="900" height="675" alt="박물관 조각" loading="lazy"><span class="ref">참고 이미지</span><b>유물 · 미술품</b></li>
+  </ul>
+  <div class="spec">
+    <div><b>리프트 안전난간대</b><span>바퀴 장비 상하차</span></div>
+    <div><b>1.4톤~11톤</b><span>전 차종 무진동 · 리프트</span></div>
+    <div><b>5톤 특수무진동</b><span>적재함 6.5 m · 리프트 2.1 m</span></div>
+    <div><b>보험 10억 원</b><span>적재물배상책임보험</span></div>
+  </div>
+</div></section>
+
+<section class="contact" aria-labelledby="c-h"><div class="wrap">
+  <h2 id="c-h">싣는 순간부터, 대표와 상담하세요</h2>
+  <a class="big-tel" href="tel:010-5256-2425">010-5256-2425</a>
+  <p class="who">대표 김준수 · <a href="mailto:kjs242424@gmail.com">kjs242424@gmail.com</a><span class="ph"> · 사업자등록번호 <span class="blank">받는 중</span></span></p>
+  <p class="slogan">"정성을 다합니다." — 김준수 대표</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>특수화물무진동24 (나라트랜스) · 대표 김준수 · <span class="tel">010-5256-2425</span></p>
+  <p>사진은 무료 참고 이미지(Unsplash)이며 실제 보유 차량·작업 사진이 아닙니다. 마지막 업데이트 2026-10-28.</p>
+  <button type="button" class="review-t draft-only" id="review" aria-pressed="false">사장님 확인용 보기: 받아야 할 정보 자리 표시</button>
+</div></footer>
+
+<div class="callbar" id="callbar"><a href="tel:010-5256-2425" tabindex="-1"><span>대표 직통 전화 상담</span><b>010-5256-2425</b></a></div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var rv=$('review');function setR(on){document.body.classList.toggle('review',on);rv&&rv.setAttribute('aria-pressed',on?'true':'false')}
+  rv&&rv.addEventListener('click',function(){setR(!document.body.classList.contains('review'))});if(/[?&]review\b/.test(location.search))setR(true);
+  var imgs=$('frame').querySelectorAll('img'),steps=document.querySelectorAll('.step'),fill=$('fill'),count=$('count'),cap=$('cap');
+  var CAP=['참고 이미지','참고 이미지 · 난간대 실물 사진 받는 중','참고 이미지','참고 이미지','참고 이미지'];
+  function show(i,h){imgs.forEach(function(m,k){m.classList.toggle('on',k===i)});steps.forEach(function(s,k){s.classList.toggle('on',k===i)});fill.style.height=h+'%';count.textContent=(i+1)+' / '+steps.length;cap.textContent=CAP[i]}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)show(+e.target.dataset.i,+e.target.dataset.h)})},{rootMargin:'-45% 0px -45% 0px'});steps.forEach(function(s){io.observe(s)})}
+  else steps.forEach(function(s){s.classList.add('on')});
+  var bar=$('callbar'),hc=$('heroCall');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){var v=es[0].isIntersecting;bar.classList.toggle('show',!v);bar.querySelector('a').tabIndex=v?-1:0}).observe(hc)}else bar.classList.add('show');
+})();
+</script>
+</body></html>
