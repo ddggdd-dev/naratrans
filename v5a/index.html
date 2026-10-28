@@ -35,6 +35,10 @@ body.review span.ph{display:inline!important}
 .brand{text-decoration:none;display:flex;align-items:baseline;gap:10px;min-height:44px;align-items:center}
 .brand b{font-weight:800;font-size:1.125rem}
 .brand small{font-size:.8125rem;color:var(--muted)}
+.nav a.m{color:var(--ink)}
+.nav{display:flex;align-items:center;gap:22px}
+.nav a.m{text-decoration:none;font-size:.9375rem;font-weight:600}
+@media (max-width:860px){.nav a.m{display:none}}
 .top a.call{font-weight:700;text-decoration:none;border:1.5px solid var(--ink);padding:8px 14px;min-height:44px;display:inline-flex;align-items:center}
 
 /* 첫 화면: 왼쪽 문구 / 오른쪽 점검표 서류 */
@@ -140,7 +144,7 @@ footer p+p{margin-top:4px}
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>특수화물무진동24</title></head><body><header class="top"><div class="wrap">
   <a class="brand" href="#top"><b>특수화물무진동24</b><small>나라트랜스</small></a>
-  <a class="call" href="tel:010-5256-2425">전화 상담</a>
+  <nav class="nav" aria-label="주요 메뉴"><a class="m" href="#sheet">안전 점검표</a><a class="m" href="#p2">안전 기준</a><a class="m" href="#p3">옮기는 장비</a><a class="m" href="#p4">차량</a><a class="call" href="tel:010-5256-2425">전화 상담</a></nav>
 </div></header>
 
 <main id="top">

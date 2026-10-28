@@ -35,6 +35,11 @@ body.review span.ph{display:inline!important}
 .brand{text-decoration:none;display:flex;align-items:center;gap:10px;min-height:44px}
 .brand b{font-family:var(--sign);font-size:1.375rem;font-weight:400;letter-spacing:.01em}
 .brand small{font-size:.8125rem;color:#BDBDBD}
+
+.nav{display:flex;align-items:center;gap:22px}
+.nav a.m{text-decoration:none;font-size:.9375rem;font-weight:600}
+@media (max-width:860px){.nav a.m{display:none}}
+.top .nav a.m{color:#fff}
 .top .call{font-weight:800;text-decoration:none;border:2px solid var(--y);color:var(--y);padding:8px 14px;min-height:44px;display:inline-flex;align-items:center}
 
 .hero{background:var(--y);overflow:hidden}
@@ -113,7 +118,7 @@ footer a{color:#fff}
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>특수화물무진동24</title></head><body><header class="top"><div class="wrap">
   <a class="brand" href="#top"><b>특수화물무진동24</b><small>나라트랜스</small></a>
-  <a class="call" href="tel:010-5256-2425">전화 상담</a>
+  <nav class="nav" aria-label="주요 메뉴"><a class="m" href="#signs">안전 기준</a><a class="m" href="#cargo-h">옮기는 장비</a><a class="m" href="#c-h">상담</a><a class="call" href="tel:010-5256-2425">전화 상담</a></nav>
 </div></header>
 <div class="stripe" aria-hidden="true"></div>
 
